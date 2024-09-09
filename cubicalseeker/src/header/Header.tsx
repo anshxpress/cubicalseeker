@@ -1,19 +1,17 @@
-import { Avatar, Indicator } from "@mantine/core";
-import { IconAsset, IconBell, IconBellPlus, IconSettingsCode, IconZoomCodeFilled } from "@tabler/icons-react";
+import { Avatar, Indicator,NavLink} from "@mantine/core";
+import { IconBellPlus, IconSettingsCode, IconZoomCodeFilled } from "@tabler/icons-react";
+import NavLinks from "./NavLinks";
 
 const Header = () => {
     return <div className="w-full bg-mine-shaft-950 px-6 text-white h-20 flex justify-between
     items-center">
         <div className="flex gap-1 items-center text-sapphire-400">
             <IconZoomCodeFilled className="h-8 w-8"stroke={1.25} />
-            <div className="text-3xl font-semibold">cubicalseeker</div>
+            <div className="text-3xl font-semibold">Cubical Seeker</div>
         </div>
-        <div className="flex gap-5">
-            <a href="">Find Job</a>
-            <a href="">Find Prefrence</a>
-            <a href="">Upload Job</a>
-            <a href="">About US</a>
-        </div>
+        {
+        NavLinks()
+        }
         <div className="flex gap-3 item-center"> 
             
             <div className="flex items-center gap-2">
