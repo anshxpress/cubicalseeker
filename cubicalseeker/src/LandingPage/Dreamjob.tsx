@@ -23,9 +23,9 @@ return(
             </div>
         </div>
         <div className="w-[55%] flex  items-center justify-center">
-            <div className="w-[30rem]">  
+            <div className="w-[30rem] relative">  
                 <img src="/Boy.png" alt="boy" />
-                <div className="w-fit">
+                <div className="absolute -right-10 w-fit top-[50%] border-sky-400 border rounded-lg p-2 backdrop-blur-md">
                 <div className="text-center mb-1 text-sm text-mine-shaft-100">5k+ got Job</div>
                 <Avatar.Group>
                      <Avatar src="avatar.png" />
@@ -33,6 +33,21 @@ return(
                      <Avatar src="avatar2.png" />
                       <Avatar>+5K</Avatar>
                  </Avatar.Group>
+                </div>
+                <div className="absolute -left-5 w-fit top-[28%] border-sky-400 border rounded-lg p-2 backdrop-blur-md gap-3 flex flex-col">
+                    <div className="flex gap-2 items-center">
+                        <div className="w-10 h-10 p-1 bg-mine-shaft-900 rounded-lg"> 
+                            <img src="/Icons/Google.png" alt="" /> 
+                        </div>
+                        <div className="text-sm text-mine-shaft-100">
+                            <div>Software Engineer</div>
+                            <div className="text-mine-shaft-200 text-xs">India</div>
+                        </div>
+                    </div>
+                    <div className="flex gap-2 justify-around text-mine-shaft-200 text-xs">
+                        <span> 1 day ago </span>
+                        <span> 120 Applicants </span>
+                    </div>
                 </div>
             </div>
         </div>
