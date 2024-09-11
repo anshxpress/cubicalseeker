@@ -1,6 +1,6 @@
 const companies = ["Google", "Amazon", "Figma", "Netflix", "Meta", "Microsoft", "Pinterest", "Slack", "Spotify", "Oracle", "Walmart"];
 
-const jobCategory = [
+const jobCategorylist:any = [
     {
         "name": "Digital Marketing",
         "desc": "Promote brands online with marketing strategies",
@@ -97,4 +97,4 @@ const footerLinks = [
     { title: "Support", links: ["Help & Support", "Feedback", "FAQs"] }
 
 ]
-export { companies, jobCategory, work, testimonials, footerLinks };
+export { companies, jobCategorylist, work, testimonials, footerLinks };

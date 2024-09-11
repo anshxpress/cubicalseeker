@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import '@mantine/carousel/styles.css';
 import './App.css';
 import { createTheme, MantineProvider} from '@mantine/core';
 import '@mantine/core/styles.css'
