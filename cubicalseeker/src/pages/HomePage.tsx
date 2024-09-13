@@ -1,7 +1,9 @@
+import Footer from "../footer/Footer";
 import Header from "../header/Header";
 import Companies from "../LandingPage/Companies";
 import Dreamjob from "../LandingPage/Dreamjob";
 import JobCategory from "../LandingPage/JobCategory";
+import Newmembers from "../LandingPage/Newmembers";
 import Testimonial from "../LandingPage/Testimonials";
 import Working from "../LandingPage/Working";
 const HomePage=()=>{
@@ -13,6 +15,8 @@ const HomePage=()=>{
             <JobCategory/>
             <Working/>
             <Testimonial/>
+            <Newmembers/>
+            <Footer/>
         </div>
     )   
 }
