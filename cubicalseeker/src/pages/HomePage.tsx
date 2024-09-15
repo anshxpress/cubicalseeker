@@ -9,14 +9,12 @@ import Working from "../LandingPage/Working";
 const HomePage=()=>{
     return(
         <div className="min-h-screen bg-mine-shaft-950 font-['poppins']">
-            <Header/>
             <Dreamjob/>
             <Companies/>
             <JobCategory/>
             <Working/>
             <Testimonial/>
             <Newmembers/>
-            <Footer/>
         </div>
     )   
 }
