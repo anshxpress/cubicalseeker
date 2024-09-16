@@ -4,7 +4,7 @@ import { footerLinks } from "../Data/Data";
 import { link } from "fs";
 
 const Footer=()=>{
-    return <div className="pd-20 pb-5 flex gap-5 justify-around bg-mine-shaft-950 font-['poppins']">
+    return <div className="pd-20 py-10 flex gap-5 justify-around bg-mine-shaft-950 font-['poppins']">
         <div className="w-1/4 flex flex-col gap-4">
         <div className="flex gap-1 items-center text-sapphire-400">
             <IconZoomCodeFilled className="h-6 w-6"stroke={1.25} />
