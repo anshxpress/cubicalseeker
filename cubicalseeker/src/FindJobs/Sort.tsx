@@ -5,13 +5,13 @@ import { IconSettingsCode } from '@tabler/icons-react';
 const opt = ['Relevance', 'Most Recent', 'Salary (high - low)', 'Salary (low - high)'];
 
 const Sort=() => {
-  const [selectedItem, setSelectedItem] = useState<string | null>(null);
+  const [selectedItem, setSelectedItem] = useState<string | null>('Relevance');
   const combobox = useCombobox({
     onDropdownClose: () => combobox.resetSelectedOption(),
   });
 
   const options = opt.map((item) => (
-    <Combobox.Option value={item} key={item}>
+    <Combobox.Option className='!text-xs' value={item} key={item}>
       {item}
     </Combobox.Option>
   ));
@@ -19,17 +19,16 @@ const Sort=() => {
   return (
       <Combobox
         store={combobox}
-        width={250}
+        width={150}
         position="bottom-start"
-        withArrow
         onOptionSubmit={(val) => {
           setSelectedItem(val);
           combobox.closeDropdown();
         }}
       >
         <Combobox.Target>
-          <div className='border border-sky-blue-400'>
-            {selectedItem} <IconSettingsCode/>
+          <div onClick={()=>combobox.toggleDropdown()} className='cursor-pointer border border-blue-400 flex gap-2 px-2 py-1 text-sm rounded-lg items-center'>
+            {selectedItem} <IconSettingsCode className='h-5 w-5 text-blue-400'/>
           </div>
         </Combobox.Target>
 
