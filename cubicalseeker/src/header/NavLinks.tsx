@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 const NavLinks=()=>{
     const links=[
         {name:"Find Jobs",url:"find-jobs"},
-        {name:"Find Preference",url:"find-preference"},
+        {name:"Find Talent",url:"find-Talent"},
         {name:"Upload Jobs",url:"upload-jobs"},
         {name:"About US",url:"about"},
     ]

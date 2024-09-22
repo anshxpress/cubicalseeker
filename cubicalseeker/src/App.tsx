@@ -9,6 +9,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Findjobs from './pages/Findjobs';
 import Header from './header/Header';
 import Footer from './footer/Footer';
+import FindTalentPage from './pages/FindTalentPage';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
     <Header/>
     <Routes>
       <Route path='/find-jobs' element={<Findjobs/>}/>
+      <Route path='/find-talent' element={<FindTalentPage/>}/>
       <Route path='*' element={<HomePage/>} />
     </Routes>
      <Footer/>

@@ -3,12 +3,14 @@ import { dropdownData } from "../Data/JobsData";
 import { useState } from "react";
 import { IconCoinRupeeFilled } from "@tabler/icons-react";
 import Multiinput from "../FindJobs/Multiinput";
+import Searchbar from "../FindJobs/Searchbar";
+import { searchFields } from "../Data/TalentData";
 
 const SearchBar=()=>{
     const [value, setValue] = useState<[number, number]>([1, 100]);
     return <div className="flex px-5 py-8 ">
         {
-            dropdownData.map((item,index)=><><div key={index} className="w-1/5">
+            searchFields.map((item,index)=><><div key={index} className="w-1/5">
                 <Multiinput {...item} />
             </div><Divider mr="xs" size="sm" orientation="vertical" /></>)
         }
@@ -26,4 +28,4 @@ const SearchBar=()=>{
     </div>
 
 }
-export default SearchBar;
+export default Searchbar;
