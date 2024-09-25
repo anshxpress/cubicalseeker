@@ -10,6 +10,7 @@ import Findjobs from './pages/Findjobs';
 import Header from './header/Header';
 import Footer from './footer/Footer';
 import FindTalentPage from './pages/FindTalentPage';
+import TalentProfile from './pages/TalentProfile';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
     <Routes>
       <Route path='/find-jobs' element={<Findjobs/>}/>
       <Route path='/find-talent' element={<FindTalentPage/>}/>
+      <Route path='/talent-profile' element={<TalentProfile/>}/>
       <Route path='*' element={<HomePage/>} />
     </Routes>
      <Footer/>

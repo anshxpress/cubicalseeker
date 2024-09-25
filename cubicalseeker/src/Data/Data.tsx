@@ -76,7 +76,7 @@ const testimonials = [
         "rating": 5
     },
     {
-        "name": "Prem Chaoudhary",
+        "name": "Prem Choudhary",
         "testimonial": "Found my dream job within a week! The application process was smooth.",
         "rating": 5
     },
