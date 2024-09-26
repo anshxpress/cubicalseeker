@@ -37,12 +37,12 @@ const TalentCard=(props:any) =>{
         </div>
     </div>
     <Divider size="xs" color="blue.7"/>
-        <div className="flex [&>*]:w-1/3 [&>*]:p-1">
+        <div className="flex [&>*]:w-1/2 [&>*]:p-1">
             <Link to="/talent-profile">
-                <Button  variant="outline">Profile</Button>
+                <Button  variant="outline" fullWidth>Profile</Button>
             </Link>
         <div className="flex [&>*]:p-1">
-            <Button variant="light">Message</Button>
+            <Button variant="light" fullWidth>Message</Button>
         </div>
     </div>
     </div>
