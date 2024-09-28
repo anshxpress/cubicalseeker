@@ -15,7 +15,6 @@ const Talents=() =>{
                     return <TalentCard key={index} {...talent}/>
                 })
             }
-           <TalentCard/>
         </div>
     </div>
 }
