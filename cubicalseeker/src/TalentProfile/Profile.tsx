@@ -48,7 +48,7 @@ const Profile=(props:any)=>{
             <div className="text-3xl font-semibold mb-5">Certification</div>
             <div className="flex flex-col gap-8">
             {
-                props.certificate?.map((certi:any, index:any)=><CertiCard key={index}{...certi}/>)
+                props.certifications?.map((certi:any, index:any)=><CertiCard key={index} {...certi}/>)
             }
             </div>
         </div>

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Profile from "../TalentProfile/Profile";
 import { profile } from "../Data/TalentData";
 import RecommendTalent from "../TalentProfile/RecommendTalent";
+import CertiCard from "../TalentProfile/CertiCard";
 
 const TalentProfile=()=>{
     return(
