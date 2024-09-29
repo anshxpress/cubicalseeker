@@ -2,10 +2,11 @@
 import { IconBookmarkPlus, IconCalendarClock } from "@tabler/icons-react";
 import { Divider, Text } from '@mantine/core';
 import { ClassNames } from "@emotion/react";
+import { Link } from "react-router-dom";
 
 
 const JobCards=(props:any) =>{
-    return <div  className="bg-mine-shaft-900 p-3 w-72 flex flex-col gap-3 rounded-xl hover:shadow-[0_0_5px_1px_blue] !shadow-sky-400">
+    return <Link  to="/jobs" className="bg-mine-shaft-900 p-3 w-72 flex flex-col gap-3 rounded-xl hover:shadow-[0_0_5px_1px_blue] !shadow-sky-400">
         <div className="flex justify-evenly">
             <div className="flex gap-2 items-justify">
                 <div className="p-2 bg-mine-shaft-800 rounded-md">
@@ -37,6 +38,6 @@ const JobCards=(props:any) =>{
             <IconCalendarClock className="h-5 w-5" stroke={1.5}/> {props.postedDaysAgo} days ago
         </div>
     </div>
-    </div>
+    </Link>
 }
 export default JobCards;

@@ -2,7 +2,6 @@ import { IconMapPins, IconUserHeart } from "@tabler/icons-react";
 import { Avatar, Button, Divider, Text } from '@mantine/core';
 import { Link } from "react-router-dom";
 
-
 const TalentCard=(props:any) =>{
     return <div  className="bg-mine-shaft-900 p-4 w-96 flex flex-col gap-3 rounded-xl hover:shadow-[0_0_5px_1px_blue] !shadow-sky-400">
         <div className="flex justify-between">
@@ -39,10 +38,10 @@ const TalentCard=(props:any) =>{
     <Divider size="xs" color="blue.7"/>
         <div className="flex [&>*]:w-1/2 [&>*]:p-1">
             <Link to="/talent-profile">
-                <Button  variant="outline" fullWidth>Profile</Button>
+                <Button color="blue.4" variant="outline" fullWidth>Profile</Button>
             </Link>
         <div className="flex [&>*]:p-1">
-            <Button variant="light" fullWidth>Message</Button>
+            <Button color="blue.4" variant="light" fullWidth>Message</Button>
         </div>
     </div>
     </div>

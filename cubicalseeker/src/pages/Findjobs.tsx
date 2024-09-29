@@ -5,7 +5,6 @@ import Jobs from "../FindJobs/Jobs";
 const Findjobs=()=>{
     return(
         <div className="min-h-screen bg-mine-shaft-950 font-['poppins']">
-            <Divider mr="xs" mx="md"/>
             <Searchbar/>
             <Divider size="xs" mx='md'/>
             <Jobs/>
