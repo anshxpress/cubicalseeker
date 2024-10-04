@@ -15,7 +15,7 @@ const JobDesc=()=>{
                 <div className="p-3 bg-mine-shaft-800 rounded-xl">
                     <img className="h-14" src={`/Icons/Google.png`} alt="" />
                 </div>
-                <div>
+                <div className="flex flex-col gap-1">
                     <div className="font-semibold text-2xl">
                         Data scientist
                     </div>
@@ -53,10 +53,34 @@ const JobDesc=()=>{
                     }
                 </div>
                 <Divider my="xl" color="blue.5"/>
-                <div className="[&_h4]:text-xl" dangerouslySetInnerHTML={{__html:data}}>
+                <div className="[&_h4]:text-xl [&_*]:text-mine-shaft-300 [&_li]:marker:text-sky-400 [&_li]:mb-1 [&_h4]:my-5 [&_h4]:font-semibold
+                 [&_h4]:text-mine-shaft-200 [&_p]:text-justify"
+                 dangerouslySetInnerHTML={{__html:data}}>
                 </div>
-             </div>
+                <Divider my="xl" color="blue.5"/>
+                <div>
+                    <div className="text-xl font-semibold mb-5">About the Company</div>
+                    <div className="flex justify-between">
+            <div className="flex gap-2 items-center">
+                <div className="p-3 bg-mine-shaft-800 rounded-xl">
+                    <img className="h-9" src={`/Icons/Google.png`} alt="" />
+                </div>
+                <div className="flex flex-col">
+                    <div className="font-medium text-2xl">
+                        Google
+                    </div>
+                    <div className=" text-mine-shaft-300">10K+ Employees &bull; 3 days ago
+                        &#183; 50 Applicants</div>
+                </div>
+                    <Link to="">
+                    <Button color="blue.4" variant="light">Company Page</Button>
+                    </Link>  
+                </div>    
+            </div>
+            <div className=" text-mine-shaft-300 text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias ipsam obcaecati, velit iusto voluptate numquam cupiditate assumenda ad? Obcaecati nemo ratione eaque dicta facilis nihil tempora debitis soluta, repellendus excepturi tenetur asperiores ea blanditiis, quisquam quam. Quam, dignissimos. Doloremque, magnam.</div>
         </div>
+     </div>
+</div>
     ) 
 }
 export default JobDesc;

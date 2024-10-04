@@ -2,6 +2,8 @@ import { Button } from "@mantine/core";
 import { IconChevronsLeft } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 import JobDesc from "../JobDescription/JobDesc";
+import RecommendTalent from "../TalentProfile/RecommendTalent";
+import RecommendedJob from "../JobDescription/RecommendedJob";
 
 const JobDescPage=()=>{
     return(
@@ -11,6 +13,7 @@ const JobDescPage=()=>{
             </Link>
             <div className="flex gap-5">
               <JobDesc/>
+              <RecommendedJob/>
             </div>
         </div>
     )
