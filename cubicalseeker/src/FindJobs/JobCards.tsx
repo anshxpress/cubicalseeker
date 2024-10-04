@@ -29,7 +29,7 @@ const JobCards=(props:any) =>{
         <div>{props.location}</div>
     </div>
     <Text className="!text-xs text-justify !text-mine-shaft-300" lineClamp={3}>{props.description}</Text>
-<Divider size="xs" color="mineShaft.7"/>
+<Divider size="xs" color="blue.7"/>
     <div className="flex justify-between">
         <div className="font-semibold text-mine-shaft-200">
           &#8377;{props.package}  
