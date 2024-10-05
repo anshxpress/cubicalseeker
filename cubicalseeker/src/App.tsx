@@ -30,6 +30,7 @@ function App() {
   return (
    <MantineProvider defaultColorScheme='dark'theme={theme}>
     <BrowserRouter>
+    <div className='relative'>
     <Header/>
     <Divider color="blue.5" size="xs"/>
     <Routes>
@@ -42,6 +43,7 @@ function App() {
       <Route path='*' element={<HomePage/>} />
     </Routes>
      <Footer/>
+     </div>
     </BrowserRouter>
     </MantineProvider>
   );
