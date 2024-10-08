@@ -6,13 +6,13 @@ import { card, desc, skills } from "../Data/JobDescData";
 import DOMPurify from 'dompurify';
 
 
-const JobDesc=()=>{
+const JobDesc=(props:any)=>{
     const data= DOMPurify.sanitize(desc);
     return(
         <div className="w-2/3">
-             <div className="flex justify-between">
-            <div className="flex gap-2 items-justify">
-                <div className="p-3 bg-mine-shaft-800 rounded-xl">
+             <div className="flex justify-between items-center">
+            <div className="flex items-center gap-2">
+                <div className="p-3 bg-mine-shaft-800 rounded-xl flex">
                     <img className="h-14" src={`/Icons/Google.png`} alt="" />
                 </div>
                 <div className="flex flex-col gap-1">
@@ -22,11 +22,11 @@ const JobDesc=()=>{
                     <div className="text-lg text-mine-shaft-300">Google &bull; 3 days ago
                         &#183; 50 Applicants</div>
                 </div>
-                <div className="flex flex-col gap-2 size-xs items-center">
+                <div className="flex flex-col gap-2 items-center">
                     <Link to="/apply-job">
-                    <Button color="blue.4" size="sm" variant="light">Apply</Button>
+                    <Button color="blue.4" size="sm" variant="light">{props.edit?"Edit": "Apply"}</Button>
                     </Link>
-                    <IconBookmarkPlus className="text-sky-400 cursor-pointer" stroke={1.5} />
+                   {props.edit?<Button color="red.5" size="sm" variant="outline">Delete</Button>:<IconBookmarkPlus className="text-sky-400 cursor-pointer" stroke={1.5}/>}
                 </div>
             </div>           
         </div>
@@ -72,7 +72,7 @@ const JobDesc=()=>{
                     <div className=" text-mine-shaft-300">10K+ Employees &bull; 3 days ago
                         &#183; 50 Applicants</div>
                 </div>
-                    <Link to="">
+                    <Link to="/company">
                     <Button color="blue.4" variant="light">Company Page</Button>
                     </Link>  
                 </div>    

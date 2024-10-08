@@ -5,8 +5,8 @@ import TextEditor from "./TextEditor";
 import { IconChevronsLeft } from "@tabler/icons-react";
 
 const PostJob=()=>{
-    const select=fields;
-    return <div className="w-4/5 mx-auto">
+    const select = fields;
+    return <div className="px-16 py-5">
         <div className="text-2xl font-semibold mb-5">Post a Job</div>
         <div className="flex flex-col gap-5">
             <div className="flex gap-10 [&>*]:w-1/2">
