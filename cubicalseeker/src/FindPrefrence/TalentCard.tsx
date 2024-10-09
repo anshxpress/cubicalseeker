@@ -53,7 +53,9 @@ const TalentCard=(props:any) =>{
                 <Button color="blue.4" variant="outline" fullWidth>Profile</Button>
             </Link>
         <div className="flex [&>*]:p-1">
-           {props.posted?<Button onClick={open} rightSection={<IconCalendarMonth className="w-5 h-5"/>} color="blue.4" variant="light" fullWidth>Schedule</Button>:<Button color="blue.4" variant="light" fullWidth>Message</Button>}
+           {props.posted?<Button onClick={open} rightSection={<IconCalendarMonth className="w-5 h-5"/>} 
+           color="blue.4" variant="light" fullWidth>Schedule</Button>:<Button color="blue.4" variant="light" 
+           fullWidth>Message</Button>}
         </div>
             </>
         }  
