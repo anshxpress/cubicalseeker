@@ -33,7 +33,7 @@ const JobDesc=(props:any)=>{
         <Divider my="xl" color="blue.5"/>
         <div className="flex justify-between">
             {
-                card.map((item:any, index:number) => <div key={index} className="felx flex-col items-center gap-1">
+                card.map((item:any, index:number) => <div key={index} className="flex flex-col items-center gap-1">
                 <ActionIcon className="!h-12 !w-12" color="blue.4" variant="light" size="lg" radius="xl"  aria-label="Settings">
                      <item.icon className="h-4/5 w-4/5" stroke={1.5} />
                  </ActionIcon>

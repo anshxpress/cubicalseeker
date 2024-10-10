@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import Signup from "../SignupLogin/Signup";
 
 const NavLinks=()=>{
     const links=[
@@ -6,10 +7,11 @@ const NavLinks=()=>{
         {name:"Find Talent",url:"find-Talent"},
         {name:"Post Jobs",url:"post-jobs"},
         {name:"Posted Job",url:"posted-job"},
-        {name:"Job History", url:"job-history"}
+        {name:"Job History", url:"job-history"},
+        {name:"Signup", url:"Signup"}
     ]
     const location  = useLocation();
-    return <div className="flex gap-8 text-mine-shaft 200 h-full items-center">
+    return <div className="flex gap-8 text-mine-shaft 200 h-full items-center py-3">
         {   
         links.map((link,index)=><div className=
         {`${location.pathname=="/"+link.url?"border-sky-600 text-sky-600" : "border-transparent"}

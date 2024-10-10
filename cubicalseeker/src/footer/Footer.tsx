@@ -1,10 +1,10 @@
 import { IconBrandFacebook, IconBrandInstagram, IconBrandLinkedin, IconBrandMeta, IconBrandX, IconZoomCodeFilled } from "@tabler/icons-react";
-import exp from "constants"
 import { footerLinks } from "../Data/Data";
-import { link } from "fs";
+import { useLocation } from "react-router-dom";
 
 const Footer=()=>{
-    return <div className="pd-20 py-10 flex gap-5 justify-around bg-mine-shaft-950 font-['poppins']">
+    const location = useLocation();
+    return location.pathname!= "/signup" ? <div className="pd-20 py-10 flex gap-5 justify-around bg-mine-shaft-950 font-['poppins']">
         <div className="w-1/4 flex flex-col gap-4">
         <div className="flex gap-1 items-center text-sapphire-400">
             <IconZoomCodeFilled className="h-6 w-6"stroke={1.25} />
@@ -30,6 +30,6 @@ const Footer=()=>{
                 }
             </div>)
         }
-    </div>
+    </div>:<></>
 }
 export default Footer;
