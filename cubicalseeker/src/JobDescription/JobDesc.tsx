@@ -77,7 +77,7 @@ const JobDesc=(props:any)=>{
                     </Link>  
                 </div>    
             </div>
-            <div className=" text-mine-shaft-300 text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias ipsam obcaecati, velit iusto voluptate numquam cupiditate assumenda ad? Obcaecati nemo ratione eaque dicta facilis nihil tempora debitis soluta, repellendus excepturi tenetur asperiores ea blanditiis, quisquam quam. Quam, dignissimos. Doloremque, magnam.</div>
+            <div className=" text-mine-shaft-300 text-justify py-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias ipsam obcaecati, velit iusto voluptate numquam cupiditate assumenda ad? Obcaecati nemo ratione eaque dicta facilis nihil tempora debitis soluta, repellendus excepturi tenetur asperiores ea blanditiis, quisquam quam. Quam, dignissimos. Doloremque, magnam.</div>
         </div>
      </div>
 </div>

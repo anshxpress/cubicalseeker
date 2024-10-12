@@ -1,5 +1,4 @@
 import { Link, useLocation } from "react-router-dom";
-import Signup from "../SignupLogin/Signup";
 
 const NavLinks=()=>{
     const links=[
