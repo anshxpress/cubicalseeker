@@ -6,6 +6,7 @@ import { registerUser } from "../Services/UserService";
 import { signupValidation } from "../Services/FormValidation";
 import { escape } from "querystring";
 import { notifications } from "@mantine/notifications";
+import { errorNotificaton } from "./NotificationService";
 const form={
     name: "",
     email: "",
@@ -21,7 +22,10 @@ const Signup=(props:any)=>{
 
     const navigate = useNavigate();
 
+    const [loading, setloading] = useState(false);
+
     const handleChange=(event:any)=>{
+        
         if(typeof(event)=="string"){
             setData({...data,accountType:event});
             return;
@@ -44,6 +48,7 @@ const Signup=(props:any)=>{
         }
     }
     const handleSubmit=()=>{
+        setloading(true);
         let valid=true, newFormError:{[key:string]:string}={};
         for(let key in data){
             if(key==="accountType")continue; 
@@ -65,19 +70,15 @@ const Signup=(props:any)=>{
                 className:"!border-sky-500",
               })
               setTimeout(() => {
+                setloading(false);
                 navigate("/login");
-              }, 4000);
+              }, 4000)
         }).catch((err)=>
             {
-                notifications.show({
-                    title: 'Registration fail',
-                    message: 'credentials missing',
-                    withCloseButton:true,
-                    icon:<IconX style={{width:"90%",height:"90%"}}/>, color:"red",
-                    withBorder:true,
-                    className:"!border-red-500",
-                  })
-            });
+                setloading(false);
+                console.log(err);
+                errorNotificaton("Registration Failed", err.response.data.errorMessage);
+                  });
        }
     }
 

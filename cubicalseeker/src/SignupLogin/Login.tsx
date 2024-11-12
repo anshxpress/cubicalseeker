@@ -1,4 +1,4 @@
-import { rem, PasswordInput, Button, TextInput } from "@mantine/core";
+import { rem, PasswordInput, Button, TextInput, LoadingOverlay } from "@mantine/core";
 import { IconAt, IconCheck, IconLock, IconX } from "@tabler/icons-react";
 import { Link, useNavigate } from "react-router-dom";
 import { loginUser } from "../Services/UserService";
@@ -7,13 +7,15 @@ import { loginValidation } from "../Services/FormValidation";
 import { notifications } from "@mantine/notifications";
 import { useDisclosure } from "@mantine/hooks";
 import ResetPassword from "./ResetPassword";
-
-const form = {
-    email: "",
-    password: "",
-}
-
+import { useDispatch } from "react-redux";
+import { setUser } from "../Slices/UserSlices";
 const Login = () => {
+    const [loading, setloading] = useState(false);
+    const dispatch = useDispatch();
+    const form = {
+        email: "",
+        password: "",
+}
     const [data, setData] = useState(form);
     const [formError, setFormError] = useState<{ [key: string]: string }>(form);
     const navigate = useNavigate();
@@ -25,6 +27,7 @@ const Login = () => {
     }
 
     const handleSubmit = () => {
+        setloading(true);
         let valid = true;
         let newFormError: { [key in keyof typeof form]: string } = { email: "", password: "" };
 
@@ -50,9 +53,12 @@ const Login = () => {
                         className:"!border-sky-500",
                       });
                     setTimeout(() => {
+                        
+                        dispatch(setUser(res));
                         navigate("/homepage");
                     }, 4000);
                 }).catch((err) => {
+                    setloading(false);
                     const errorMessage = err.response?.data?.errorMessage || "An unknown error occurred";
                     console.log(err);
                     notifications.show({
@@ -67,7 +73,7 @@ const Login = () => {
                 });
         }
     }
-    return<> <div className="w-1/2 px-20 flex flex-col justify-center gap-3">
+    return<> <LoadingOverlay visible={loading} zIndex={1000} overlayProps={{ radius: "sm", blur: 2 }} /><div className="w-1/2 px-20 flex flex-col justify-center gap-3">
             <div className="text-2xl font-semibold">User account</div>
             <TextInput
                 value={data.email}
@@ -89,7 +95,7 @@ const Login = () => {
                 label="Password"
                 placeholder="Enter password"
             />
-            <Button onClick={handleSubmit} autoContrast color="blue.5" variant="light">
+            <Button loading={loading} onClick={handleSubmit} autoContrast color="blue.5" variant="light">
                 Log In
             </Button>
             <div className="mx-auto">

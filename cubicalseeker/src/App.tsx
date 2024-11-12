@@ -21,6 +21,8 @@ import JobHistoryPage from './pages/JobHistoryPage';
 import SigninPage from './pages/SigninPage';
 import ProfilePage from './pages/ProfilePage';
 import { Notifications } from '@mantine/notifications';
+import { Provider } from 'react-redux';
+import Store from './Store';
 
 
 function App() {
@@ -36,6 +38,7 @@ function App() {
     },
   })
   return (
+    <Provider store={Store}>
    <MantineProvider defaultColorScheme='dark'theme={theme}>
     <Notifications position="top-center" zIndex={1000}/>
     <BrowserRouter>
@@ -61,6 +64,7 @@ function App() {
      </div>
     </BrowserRouter>
     </MantineProvider>
+    </Provider>
   );
 }
 
