@@ -1,5 +1,4 @@
 import axios from "axios"
-import { resourceLimits } from "worker_threads";
 const base_url = "http://localhost:8080/user/"
 
 const registerUser = async(user:any)=> {

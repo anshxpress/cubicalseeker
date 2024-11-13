@@ -27,7 +27,6 @@ const Login = () => {
     }
 
     const handleSubmit = () => {
-        setloading(true);
         let valid = true;
         let newFormError: { [key in keyof typeof form]: string } = { email: "", password: "" };
 
@@ -40,6 +39,7 @@ const Login = () => {
         console.log(data)
         setFormError(newFormError);
         if (valid) {
+            setloading(true);
             loginUser(data)
                 .then((res) => {
                     console.log(res);

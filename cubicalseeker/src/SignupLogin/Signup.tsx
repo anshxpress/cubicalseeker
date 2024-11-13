@@ -1,4 +1,4 @@
-import { Anchor, Button, Checkbox, Group, PasswordInput, Radio, rem, TextInput } from "@mantine/core";
+import { Anchor, Button, Checkbox, Group, LoadingOverlay, PasswordInput, Radio, rem, TextInput } from "@mantine/core";
 import { IconAt, IconCheck, IconLock, IconX } from "@tabler/icons-react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -48,7 +48,7 @@ const Signup=(props:any)=>{
         }
     }
     const handleSubmit=()=>{
-        setloading(true);
+        
         let valid=true, newFormError:{[key:string]:string}={};
         for(let key in data){
             if(key==="accountType")continue; 
@@ -57,8 +57,9 @@ const Signup=(props:any)=>{
             if(newFormError[key])valid=false;
         }
         setFormError(newFormError);
-              if(valid===true){
-        registerUser(data).then((res)=>{
+            if(valid===true){
+            setloading(true);
+            registerUser(data).then((res)=>{
             console.log(res);
             setData(form);
             notifications.show({
@@ -82,7 +83,8 @@ const Signup=(props:any)=>{
        }
     }
 
-    return <div className="w-1/2 px-20 flex flex-col justify-center gap-3">
+    return<> <LoadingOverlay visible={loading} zIndex={1000} className="translate-x-1/2" overlayProps={{ radius: "sm", blur: 2 }} />
+    <div className="w-1/2 px-20 flex flex-col justify-center gap-3">
         <div className="text-2xl font-semibold">Create account</div>
         <TextInput value={data.name} error={formError.name} name="name" onChange={handleChange} label="Full Name" withAsterisk  placeholder="Your Name"/>
         <TextInput value={data.email} error={formError.email}name="email" onChange={handleChange} withAsterisk  leftSection={<IconAt style={{ width: rem(16), height: rem(16) }}/>}
@@ -98,6 +100,6 @@ const Signup=(props:any)=>{
         <Checkbox autoContrast label = {<>I accept {' '} <Anchor className="text-sky-500"> terms & condititons </Anchor> </>}/>
         <Button onClick={handleSubmit} autoContrast color="blue.5" variant="light">Sign Up</Button>
         <div className="mx-auto"> Have an account? <span className="text-sky-400 hover:underline cursor-pointer" onClick={()=>{navigate("/signup"); setFormError(form); setData(form)}}>Login</span></div>
-    </div>
+    </div></>
 }
 export default Signup;
