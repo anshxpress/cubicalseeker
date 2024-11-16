@@ -8,9 +8,7 @@ import Superscript from '@tiptap/extension-superscript';
 import SubScript from '@tiptap/extension-subscript';
 import { content } from '../Data/PostJob';
 
-
-
-const TextEditor=()=> {
+const TextEditor=(props:any)=> {
   const data = content;
   const editor = useEditor({
     extensions: [
@@ -22,7 +20,10 @@ const TextEditor=()=> {
       Highlight,
       TextAlign.configure({ types: ['heading', 'paragraph'] }),
     ],
-    content,
+    content:props.get.getValues().description,
+    onUpdate({editor}){
+      props.form.setFieldValue('description',editor.getHTML());
+    }
   });
 
   return (
