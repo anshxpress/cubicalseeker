@@ -3,10 +3,11 @@ import { IconBookmarkPlus, IconCalendarClock } from "@tabler/icons-react";
 import { Divider, Text } from '@mantine/core';
 import { ClassNames } from "@emotion/react";
 import { Link } from "react-router-dom";
+import { timeAgo } from "../Services/Utilities";
 
 
 const JobCards=(props:any) =>{
-    return <Link  to="/jobs" className="bg-mine-shaft-900 p-3 w-72 flex flex-col gap-3 rounded-xl hover:shadow-[0_0_5px_1px_blue] !shadow-sky-400">
+    return <Link  to={'/jobs/${props.id}'} className="bg-mine-shaft-900 p-3 w-72 flex flex-col gap-3 rounded-xl hover:shadow-[0_0_5px_1px_blue] !shadow-sky-400">
         <div className="flex justify-evenly">
             <div className="flex gap-2 items-justify">
                 <div className="p-2 bg-mine-shaft-800 rounded-md">
@@ -17,7 +18,7 @@ const JobCards=(props:any) =>{
                         {props.jobTitle}
                     </div>
                     <div className="text-xs text-mine-shaft-300">{props.company}
-                        &#183; {props.applicants}</div>
+                        &#183; {props.applicants? props.applicants.lenght:0}</div>
                 </div>
             </div>
             <IconBookmarkPlus className="text-mine-shaft-300 cursor-pointer"/>
@@ -32,10 +33,10 @@ const JobCards=(props:any) =>{
 <Divider size="xs" color="blue.7"/>
     <div className="flex justify-between">
         <div className="font-semibold text-mine-shaft-200">
-          &#8377;{props.package}  
+          &#8377;{props.packageOffered} LPA  
         </div>
         <div className="flex gap-1 text-xs text-mine-shaft-400 items-center">
-            <IconCalendarClock className="h-5 w-5" stroke={1.5}/> {props.postedDaysAgo} days ago
+            <IconCalendarClock className="h-5 w-5" stroke={1.5}/>Posted {timeAgo(props.postTime)} 
         </div>
     </div>
     </Link>

@@ -1,5 +1,5 @@
 import { ActionIcon } from "@mantine/core";
-import { IconPlus, IconDeviceFloppy, IconPencil, IconX } from "@tabler/icons-react";
+import { IconPlus, IconDeviceFloppy, IconPencil, IconX, IconEdit, IconFilePlus } from "@tabler/icons-react";
 import { profile } from "console";
 import ExpCard from "./ExpCard";
 import ExpInput from "./ExpInput";
@@ -14,15 +14,17 @@ const Experiences = () => {
         setEdit(!edit);
     }
     return (  
+        <div>
         <div className="text-2xl font-semibold mb-4 flex justify-between">Experience  
             <div className="flex gap-2">  
-                <ActionIcon onClick={() => setAddExp(true)} variant="subtle" color="brightSun.4" size="lg">  
-                    <IconPlus className="w-4/5 h-4/5" stroke={1.5} />  
-                </ActionIcon>  
-                <ActionIcon onClick={handleClick} variant="subtle" color = {edit?"red.8":"blue.4"} size="lg">  
-                    {edit? <IconX className="w-4/5 h-4/5" stroke={1.5} /> : <IconPencil className="w-4/5 h-4/5" stroke={1.5} />}  
-                </ActionIcon>  
-            </div>  
+        <ActionIcon onClick={() => setAddExp(true)} variant="subtle" color="blue.4" size="lg">  
+          <IconEdit className="w-4/5 h-4/5" stroke={1.5} />  
+        </ActionIcon>  
+        <ActionIcon onClick={handleClick} variant="subtle" color={edit ? "red.8" : "blue.4"} size="lg">  
+          {edit ? <IconX className="w-4/5 h-4/5" stroke={1.5} /> : <IconFilePlus className="w-4/5 h-4/5" stroke={1.5} />}  
+        </ActionIcon>  
+      </div>  
+      </div>
             <div className="flex flex-col gap-8">  
                 {profile?.experiences?.map((exp: any, index: number) => <ExpCard edit={edit} key={index} index={index} {...exp} />)}  
                 {addExp && <ExpInput add setEdit={setAddExp} />}  

@@ -32,7 +32,7 @@ const About = () => {
     <div>
       <div className="text-2xl font-semibold mb-3 flex justify-between">
         About
-        <div>
+        <div className="flex gap-2">
           {edit && (
             <ActionIcon
               color="blue.5"

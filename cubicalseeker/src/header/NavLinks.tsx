@@ -7,7 +7,6 @@ const NavLinks=()=>{
         {name:"Post Jobs",url:"post-jobs"},
         {name:"Posted Job",url:"posted-job"},
         {name:"Job History", url:"job-history"},
-        {name:"Signup", url:"Signup"}
     ]
     const location  = useLocation();
     return <div className="flex gap-8 text-mine-shaft 200 h-full items-center py-3">

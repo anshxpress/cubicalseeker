@@ -19,10 +19,10 @@ export const Certificate=()=> {
     return <div>  
     <div className="text-2xl font-semibold mb-4 flex justify-between">Certifications  
       <div className="flex gap-2">  
-        <ActionIcon onClick={() => setAddCerti(true)} variant="subtle" color="brightSun.4" size="lg">  
+        <ActionIcon onClick={() => setAddCerti(true)} variant="subtle" color="blue.4" size="lg">  
           <IconEdit className="w-4/5 h-4/5" stroke={1.5} />  
         </ActionIcon>  
-        <ActionIcon onClick={handleClick} variant="subtle" color={edit ? "red.8" : "brightSun.4"} size="lg">  
+        <ActionIcon onClick={handleClick} variant="subtle" color={edit ? "red.8" : "blue.4"} size="lg">  
           {edit ? <IconX className="w-4/5 h-4/5" stroke={1.5} /> : <IconFilePlus className="w-4/5 h-4/5" stroke={1.5} />}  
         </ActionIcon>  
       </div>  
