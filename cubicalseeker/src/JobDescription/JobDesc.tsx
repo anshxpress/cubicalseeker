@@ -27,31 +27,33 @@ const JobDesc=(props:any)=>{
         dispatch(changeProfile(updatedProfile));  
     }
     useEffect(()=>{
-        if(props.applicants?.filter((applicant:any)=>applicant.id==user.id).length>0) {  
+        if(props.applicants?.filter((applicant:any)=>applicant.applicantId==user.id).length>0) {  
             setApplied(true);  
         }
+        else setApplied(false);
     },[props])
     return(
+        <div>
         <div className="w-2/3">
-             <div className="flex justify-between items-center">
+             <div className="flex justify-between item-center">
             <div className="flex items-center gap-2">
                 <div className="p-3 bg-mine-shaft-800 rounded-xl flex">
                     <img className="h-14" src={`/Icons/${props.company}.png`} alt="" />
                 </div>
-                <div className="flex flex-col gap-1">
+                <div className="flex flex-col gap-2">
                     <div className="font-semibold text-2xl">
                         {props.jobtitle}
                     </div>
-                    <div className="text-lg text-mine-shaft-300">{props.company} &bull; {timeAgo(props.postTime)}
-                        &#183; {props.applicants?props.applicants.length:0}</div>
                 </div>
-                <div className="flex flex-col gap-2 items-center">
-                    {
-                    <Link to={`/apply-job/${props.id}`}>
+                    <div className="text-lg text-mine-shaft-300">{props.company} &bull; {timeAgo(props.postTime)}  &bull; {props.applicants?props.applicants.length:0} applicant</div>
+                </div>
+                <div className="flex flex-col gap-2 items-end">
+                    {(props.edit || !applied) &&<Link to={`/apply-job/${props.id}`}>
                         <Button color="blue.4" size="sm" variant="light">{props.edit?"Edit": "Apply"}</Button>
-                     </Link>}
+                     </Link>
+                    }
                     {
-                       <Button color="blue.4" size="sm" variant="light">{props.edit?"Edit": "Apply"}</Button> 
+                       <Button color="green.4" size="sm" variant="light">{props.edit?"Edit": "Applied"}</Button> 
                     }
                     {props.edit ? <Button color="red.4" size="sm" variant="light">Delete</Button>: profile.savedJobs?.includes(props.id)?  
                     <IconBookmarkFilled onClick={handleSaveJob} className="cursor-pointer text-bright-sun-400" stroke={1.5}/> :
@@ -99,7 +101,7 @@ const JobDesc=(props:any)=>{
                         {props.company}
                     </div>
                     <div className=" text-mine-shaft-300">10K+ Employees &bull; 3 days ago
-                        &#183; 50 Applicants</div>
+                        &bull; 50 Applicants</div>
                 </div>
                     <Link to={`/company/${props.company}`}>
                     <Button color="blue.4" variant="light">Company Page</Button>

@@ -12,12 +12,12 @@ const ApplyJobComp = (props:any) => {
       <div className="w-2/3 mx-auto">
         <div className="flex gap-2 items-justify">
           <div className="p-3 bg-mine-shaft-800 rounded-xl">
-            <img className="h-14" src={`/Icons/Google.png`} alt="Company logo" />
+            <img className="h-14" src={`/Icons/${props.company}.png`} alt="Company logo" />
           </div>
           <div className="flex flex-col gap-1">
             <div className="font-semibold text-2xl">{props.jobTitle}</div>
             <div className="text-lg text-mine-shaft-300">
-              {props.Company} &bull; {timeAgo(props.postTime)} &#183; {props.applicants? props.applicants.lenght:0}Applicants
+              {props.Company} &bull; {timeAgo(props.postTime)} &bull; {props.applicants? props.applicants.lenght:0}Applicants
             </div>
           </div>
         </div>

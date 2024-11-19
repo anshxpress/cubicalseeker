@@ -42,7 +42,7 @@ const ExpCard = (props: ExpCardProps) => {
           <div className="flex flex-col gap-1">
             <div className="font-semibold">{props.title}</div>
             <div className="text-sm text-mine-shaft-300">
-              {props.company} &#183; {props.location}
+              {props.company} &bull; {props.location}
             </div>
           </div>
         </div>

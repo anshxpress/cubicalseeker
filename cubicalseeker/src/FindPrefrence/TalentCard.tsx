@@ -20,7 +20,7 @@ const TalentCard=(props:any) =>{
                         {props.name}
                     </div>
                     <div className="text-xs text-mine-shaft-300">{props.role}
-                        &#183; {props.company}</div>
+                        &bull; {props.company}</div>
                 </div>
             </div>
             <IconUserHeart className="text-mine-shaft-300 cursor-pointer"/>
