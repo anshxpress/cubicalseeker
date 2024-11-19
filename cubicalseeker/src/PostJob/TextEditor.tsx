@@ -11,20 +11,21 @@ import { content } from '../Data/PostJob';
 const TextEditor=(props:any)=> {
   const data = content;
   const editor = useEditor({
-    extensions: [
-      StarterKit,
-      Underline,
-      Link,
-      Superscript,
-      SubScript,
-      Highlight,
-      TextAlign.configure({ types: ['heading', 'paragraph'] }),
-    ],
-    content:props.get.getValues().description,
-    onUpdate({editor}){
-      props.form.setFieldValue('description',editor.getHTML());
-    }
-  });
+  extensions: [
+    StarterKit,
+    Underline,
+    Link,
+    Superscript,
+    SubScript,
+    Highlight,
+    TextAlign.configure({ types: ['heading', 'paragraph'] }),
+  ],
+  content: props.form.values.description, // Use form values directly
+  onUpdate({ editor }) {
+    // Update the form's description field on editor update
+    props.form.setFieldValue('description', editor.getHTML());
+  },
+});
 
   return (
     <RichTextEditor editor={editor}>

@@ -50,7 +50,7 @@ const Info = () => {
 
   return user ? ( // Check if `user` exists
     <>
-      <div className="px-3 mt-16 py-3">
+      <div className="px-3 mt-16 py-5">
         <div className="text-3xl font-semibold flex justify-between">
           {user?.name || "User"} {/* Use fallback value */}
           <div>

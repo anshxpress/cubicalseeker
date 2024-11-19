@@ -24,6 +24,14 @@ if (seconds < 60) {
     return `${days} days ago`;  
 } else {  
     return `${months} months ago`;  
+  }
 }
-}
-  export { formatDate, timeAgo };
+const getBase64=(file:any)=>{
+    return new Promise((resolve, reject)=>{
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload=()=>resolve(reader.result);
+      reader.onerror=error=>reject(error);
+    });
+  };
+  export { formatDate, timeAgo, getBase64 };
