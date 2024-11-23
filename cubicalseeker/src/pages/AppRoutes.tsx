@@ -30,8 +30,8 @@ const AppRoutes=()=>{
       <Route path='/posted-job' element={<PostedJobPage/>}/>
       <Route path='/job-history' element={<JobHistoryPage/>}/>
       <Route path='/apply-job/:id' element={<ApplyJobPage/>}/>
-      <Route path='/post-jobs' element={<PostJobPage/>}/>
-      <Route path='/talent-profile' element={<TalentProfile/>}/>
+      <Route path='/post-jobs/:id' element={<PostJobPage/>}/>
+      <Route path='/talent-profile/:id' element={<TalentProfile/>}/>
       <Route path='/signup' element={user?<Navigate to="/"/>:<SigninPage/>}/>
       <Route path='/login' element={user?<Navigate to="/"/>:<SigninPage/>}/>
       <Route path='/profile' element={<ProfilePage/>}/>

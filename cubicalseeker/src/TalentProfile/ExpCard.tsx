@@ -1,4 +1,5 @@
 import { IconCalendarTime } from "@tabler/icons-react";
+import { formatDate } from "../Services/Utilities";
 
 const ExpCard=(props:any)=>{
     return <div className="flex flex-col gap-2">
@@ -13,7 +14,7 @@ const ExpCard=(props:any)=>{
         </div>
     </div>
          <div className="text-sm mine-shaft-200 justify-center">
-             <div className="flex justify-center"><IconCalendarTime/>{props.startDate} - {props.endDate}</div>
+             <div className="flex justify-center"><IconCalendarTime/>{formatDate(props.startDate)} - {formatDate(props.endDate)}</div>
          </div>
     </div>
     <div className="text-sm text-mine-shaft-300 text-justify">

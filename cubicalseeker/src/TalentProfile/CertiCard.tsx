@@ -1,4 +1,5 @@
 import { IconCalendarTime } from "@tabler/icons-react";
+import { formatDate } from "../Services/Utilities";
 
 const CertiCard=(props:any)=>{
     return <div className="flex justify-between">
@@ -13,7 +14,7 @@ const CertiCard=(props:any)=>{
    </div>
         <div className="text-sm flex flex-col items-end">
             <div className="flex justify-center"><IconCalendarTime/> 
-            {props.issueDate} </div>
+            {formatDate(props.issueDate)} </div>
             <div>ID: {props.certificateId}</div>
         </div>
     </div>
