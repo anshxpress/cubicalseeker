@@ -4,8 +4,9 @@ import { Combobox, InputBase, ScrollArea, useCombobox } from '@mantine/core';
 const SelectInput=(props:any)=> {
     useEffect(()=>{
         setData(props.options);
+        setValue(props.form.getInputProps(props.name).value);
         setSearch(props.form.getInputProps(props.name).value);
-    }, [])
+    }, [props])
   const combobox = useCombobox({
     onDropdownClose: () => combobox.resetSelectedOption(),
   });

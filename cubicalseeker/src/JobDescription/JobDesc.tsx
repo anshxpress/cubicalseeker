@@ -8,6 +8,9 @@ import { timeAgo } from "../Services/Utilities";
 import { useDispatch, useSelector } from "react-redux";
 import { changeProfile } from "../Slices/ProfileSlice";
 import { useEffect, useState } from "react";
+import { postJob } from "../Services/JobService";
+import { errorNotificaton, successMessage } from "../SignupLogin/NotificationService";
+import { errorMonitor } from "stream";
 
 
 const JobDesc=(props:any)=>{
@@ -32,6 +35,13 @@ const JobDesc=(props:any)=>{
         }
         else setApplied(false);
     },[props])
+    const handleClose=()=>{
+        postJob({...props, jobStatus:"CLOSED"}).then((res)=>{
+            successMessage("success","Job closed Successfully");
+        }).catch((err)=>{
+            errorNotificaton("Error",err.response.data.errorMessage);
+        })
+    }
     return(
         <div>
         <div className="w-2/3">
@@ -48,14 +58,14 @@ const JobDesc=(props:any)=>{
                     <div className="text-lg text-mine-shaft-300">{props.company} &bull; {timeAgo(props.postTime)}  &bull; {props.applicants?props.applicants.length:0} applicant</div>
                 </div>
                 <div className="flex flex-col gap-2 items-end">
-                    {(props.edit || !applied) &&<Link to={`/apply-job/${props.id}`}>
-                        <Button color="blue.4" size="sm" variant="light">{props.edit?"Edit": "Apply"}</Button>
+                    {(props.edit || !applied) &&<Link to={props.edit?`/post-job${props.id}`:`/apply-job/${props.id}`}>
+                        <Button color="blue.4" size="sm" variant="light">{props.closed?"Reopen":props.edit?"Edit": "Apply"}</Button>
                      </Link>
                     }
                     {
                       !props.edit && applied && <Button color="green.4" size="sm" variant="light">{props.edit?"Edit": "Applied"}</Button> 
                     }
-                    {props.edit ? <Button color="red.4" size="sm" variant="light">Delete</Button>: profile.savedJobs?.includes(props.id)?  
+                    {props.edit && !props.closed? <Button color="red.4" onClick={handleClose} size="sm" variant="light">Close</Button>: profile.savedJobs?.includes(props.id)?  
                     <IconBookmarkFilled onClick={handleSaveJob} className="cursor-pointer text-bright-sun-400" stroke={1.5}/> :
                     <IconBookmark onClick={handleSaveJob} className="cursor-pointer text-bright-sun-400 hover:text-bright-sun-400 text-mine-shaft-300" stroke={1.5}/>}
                 </div>
@@ -78,8 +88,8 @@ const JobDesc=(props:any)=>{
                 <div className="text-xl font-semibold mb-5">Required Skills</div>
                 <div className="flex flex-wrap gap-2">
                     {
-                        props.skillsRequired?.map((item:any, index:any) =><ActionIcon key={item} className="!h-fit font-medium !text-sm !w-fit" color="blue.4" 
-                        variant="light" p="xs" radius="xl"  aria-label="Settings">{item}
+                    props.skillsRequired?.map((item:any, index:any) =><ActionIcon key={item} className="!h-fit font-medium !text-sm !w-fit" color="blue.4" 
+                    variant="light" p="xs" radius="xl"  aria-label="Settings">{item}
                     </ActionIcon>)
                     }
                 </div>

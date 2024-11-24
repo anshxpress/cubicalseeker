@@ -1,7 +1,5 @@
 import { useParams } from "react-router-dom";
-import { talents } from "../Data/TalentData";
 import TalentCard from "../FindPrefrence/TalentCard";
-import Talents from "../FindPrefrence/Talents";
 
 const RecommendTalent=(props:any)=>{
     const {id} = useParams();

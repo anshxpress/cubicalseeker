@@ -17,7 +17,6 @@ const Header = () => {
       getProfile(user.profileId)
         .then((res) => {
           dispatch(setProfile(res));
-          console.log(res);
         })
         .catch((err) => console.log(err));
     }

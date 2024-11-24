@@ -7,8 +7,12 @@ import TextAlign from '@tiptap/extension-text-align';
 import Superscript from '@tiptap/extension-superscript';
 import SubScript from '@tiptap/extension-subscript';
 import { content } from '../Data/PostJob';
+import { useEffect } from 'react';
 
 const TextEditor=(props:any)=> {
+  useEffect(()=>{
+    editor?.commands.setContent(props.data);
+  },[props.data])
   const data = content;
   const editor = useEditor({
   extensions: [
