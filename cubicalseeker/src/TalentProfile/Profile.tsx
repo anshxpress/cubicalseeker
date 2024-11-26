@@ -13,7 +13,7 @@ const Profile=(props:any)=>{
     const [profile, setProfile]= useState<any>({});
     useEffect(()=>{
         window.scrollTo(0,0);
-        getProfile(id).then((res)=>{
+        getProfile(props.id).then((res)=>{   
             setProfile(res);
         }).catch((err)=>{
             console.log(err);

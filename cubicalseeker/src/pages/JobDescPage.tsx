@@ -23,9 +23,11 @@ const JobDescPage=()=>{
             <Link className="my-4 inline-block" to="/find-jobs">
                 <Button leftSection={<IconChevronsLeft size={20}/>} color="blue.4" variant="light">back</Button>
             </Link>
-            <div className="flex gap-5">
+            <div className="">
+            <div className="flex gap-5 flex-col">
               <JobDesc {...job}/>
               <RecommendedJob/>
+            </div>
             </div>
         </div>
     )

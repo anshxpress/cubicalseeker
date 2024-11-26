@@ -16,8 +16,10 @@ const TalentCard=(props:any) =>{
     const [date, setDate] = useState<Date | null>(null);
     const [time, setTime] = useState<any>(null);
     const [profile, setProfile] = useState<any>({});
+    const [user,setUser] = useState<any>({})
     useEffect(() => {  
         if (props.applicantId) getProfile(props.applicantId).then((res) => {  
+            console.log(res)
                 setProfile(res);  
             }).catch((err) => {  
                 console.log(err);  
@@ -41,6 +43,7 @@ const TalentCard=(props:any) =>{
             errorNotificaton("Error", err.response.date.errorMessage);
         })
     }
+    // console.log(profile, props)
     const ref = useRef<HTMLInputElement>(null);
     return <div  className="bg-mine-shaft-900 p-4 w-96 flex flex-col gap-3 rounded-xl hover:shadow-[0_0_5px_1px_blue] !shadow-sky-400">
         <div className="flex justify-between">

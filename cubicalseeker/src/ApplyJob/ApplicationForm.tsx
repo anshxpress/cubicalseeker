@@ -4,7 +4,7 @@ import { IconPaperclip } from "@tabler/icons-react"
 import { useState } from "react";
 import { getBase64 } from "../Services/Utilities";
 import { useNavigate, useParams } from "react-router-dom";
-import { ApplyJob } from "../Services/JobService";
+import { applyJob } from "../Services/JobService";
 import { errorNotificaton, successMessage } from "../SignupLogin/NotificationService";
 import { useSelector } from "react-redux";
 
@@ -25,14 +25,14 @@ const ApplicationForm=()=>{
 const handleSubmit = async () => {  
     setSubmit(true);
     let resume:any = await getBase64(form.getValues().resume);
-    let applicant = {...form.getValues(),applicant:user.id, resume:resume.split(',')[1]};
-    ApplyJob(id, applicant).then((res)=>{  
+    let applicant = {...form.getValues(),applicantId:user.id, resume:resume.split(',')[1]};
+    applyJob(id, applicant).then((res)=>{  
       setSubmit(false);  
       successMessage("success","Application Submitted Successfully");  
       navigate("/job-history")
     }).catch((err)=>{  
       setSubmit(false);  
-      errorNotificaton("Error",err.responese.data.errormessage);  
+      errorNotificaton("Error",err.response.data.error.message);  
   })
 }
 const form = useForm({  

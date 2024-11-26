@@ -31,7 +31,7 @@ const ExpCard = (props: ExpCardProps) => {
     dispatch(changeProfile(updatedProfile)); // Dispatch the change
     successMessage("Success", "Experience Deleted Successfully"); // Notify the user
   };
-
+  console.log(props)
   return !edit ? (
     <div className="flex flex-col gap-2">
       <div className="flex justify-between">

@@ -28,7 +28,7 @@ const SelectInput=(props:any)=> {
 
   return (
     <Combobox
-      store={combobox}
+      store={combobox}   // posting job section where we gonna enter every details of job
       withinPortal={false}
       onOptionSubmit={(val) => {
         if (val === '$create') {
@@ -45,8 +45,7 @@ const SelectInput=(props:any)=> {
       }}
     >
       <Combobox.Target>
-        <InputBase withAsterisk
-        {...props.form.getInputProps(props.name)}
+        <InputBase withAsterisk  
         label={props.label}
           rightSection={<Combobox.Chevron />}
           value={search}

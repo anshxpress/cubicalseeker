@@ -1,5 +1,4 @@
 import { Tabs } from "@mantine/core";
-import { jobList } from "../Data/JobsData";
 import Card from "./Card";
 import { useEffect, useState } from "react";
 import { getAllJobs } from "../Services/JobService";
@@ -13,10 +12,12 @@ const JobHistory=()=>{
     const [showList, setShowList] = useState<any>([])
     useEffect(()=>{
       getAllJobs().then((res)=>{
+        console.log(res)
         setJobList(res);
         setShowList(res.filter((job:any)=>{
           let found=false;
           job.applicants?.forEach((applicant:any)=>{  
+            console.log(applicant)
             if(applicant.applicantId==user.id &&  
             applicant.applicationStatus=="APPLIED"){  
                 found=true;  
@@ -31,7 +32,7 @@ const JobHistory=()=>{
     const handleTabChange=((value:string | null)=>{
           setActiveTab(value);
           if(value=="SAVED"){
-              setShowList(jobList.filter((job:any)=>profile.savedJobs?.includes(job.id)))
+              setShowList(jobList.filter((job:any)=>profile.savedJobs?.includes(job.id)));
           }
           else{
             setShowList(jobList.filter((job:any)=>{

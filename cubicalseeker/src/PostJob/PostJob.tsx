@@ -8,7 +8,7 @@ import { getJob, postJob } from "../Services/JobService";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-
+// form boxes validation, even * sign, number range thing in post job deatils....
 const PostJob=()=>{
     const {id} = useParams();
     const [editorData, setEditorData] = useState(content);
@@ -30,7 +30,7 @@ const PostJob=()=>{
         }
     },[id]);
     const form = useForm({
-        mode:'controlled',
+        mode:'controlled',  //form filling process where the form made and the entry can be made 
         validateInputOnChange: true,
         initialValues:{ 
             jobTitle:'',
@@ -41,7 +41,7 @@ const PostJob=()=>{
             packageOffered: '',  
             skillsRequired: [],  
             about: '',  
-            description: content
+            description: content 
         },
         validate:{
             jobTitle: isNotEmpty('Title is required'),  
@@ -58,7 +58,7 @@ const PostJob=()=>{
     const handlePost=()=>{
         form.validate();
         if(!form.isValid())return;
-        postJob({...form.getValues(),id, postedBy:user.id, jobStatus:"ACTIVE"}).then((res)=>{
+        postJob({...form.getValues(),id, postedBy:user.id, jobStatus:"ACTIVE", postTime: Date.now}).then((res)=>{
             successMessage("success","Job posted successfully" );
             navigate(`/posted-job/${res.id}`);
         }).  catch((err)=>{

@@ -4,12 +4,13 @@ import { changeProfile } from "../Slices/ProfileSlice";
 import { successMessage } from "../SignupLogin/NotificationService";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { skills } from "../Data/JobDescData";
 
 const Skills = () => {  
         const [edit, setEdit] = useState(false);
         const dispatch = useDispatch();
         const profile = useSelector((state: any) => state.profile);
-        const [skills, setSkills] = useState <string[]> (profile.skills || []); // Initialize with profile data
+        const [Skills, setSkills] = useState <string[]> (profile.skills || []); // Initialize with profile data
       
         const handleClick = () => {
           if(!edit){
@@ -21,13 +22,14 @@ const Skills = () => {
       
         const handleSave = () => {
           setEdit(false);
-          let updatedProfile={...profile, skills:skills};
+          let updatedProfile={...profile, skills:Skills};
             dispatch(changeProfile(updatedProfile));
             console.log(updatedProfile);
             successMessage("Skills", "skills updated successfully.");  // Exit edit mode
           // Add logic here to save 'about' data if needed (e.g., update the profile)
           // Example: dispatch(updateProfile({ ...profile, about }));
         };
+        console.log(skills)
     return <div>
         <div className="text-2xl font-semibold mb-3 flex justify-between">  
             Skills   
@@ -50,7 +52,7 @@ const Skills = () => {
           </ActionIcon></div>  
         </div>  
        {edit?(<TagsInput placeholder="Add skill" value={skills} onChange={setSkills} splitChars={[',', ' ', '|']} />):
-        <div className="flex flex-wrap gap-2">{profile?.skills?.map((skill: any, index: number) => <div key={index} className="bg-bright-sun-300 rounded-3xl px-3 py-1 text-sm font-medium bg-opacity=15 text-bright-sun-400">{skill}</div>)}  
+        <div className="flex flex-wrap gap-2">{skills?.map((skill: any, index: number) => <div key={index} className="bg-bright-sun-300 rounded-3xl px-3 py-1 text-sm font-medium bg-opacity=15 text-bright-sun-400">{skill}</div>)}  
         </div>}
     </div>
 } 
