@@ -17,7 +17,7 @@ const PostJob=()=>{
     const select = fields;
     useEffect(()=>{
         window.scrollTo(0,0);
-        if(id! == "0"){
+        if(id!=="0"){
             getJob(id).then((res)=>{
                 form.setValues(res);
                 setEditorData(res.description);

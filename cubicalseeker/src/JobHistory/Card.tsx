@@ -32,7 +32,7 @@ const Card=(props:any) =>{
                         &bull; {props.applicants?props.applicants.length:0} Applicants</div>
                 </div>
             </div>
-            { profile.savedJobs?.includes(props.id) ? <IconBookmarkFilled onClick={handleSaveJob} className="cursor-pointer text-bright-sun-400" stroke={1.5} /> : <IconBookmark onClick={handleSaveJob} className="cursor-pointer text-bright-sun-400 text-mine-shaft-300" stroke={1.5} /> }
+            { profile.savedJobs?.includes(props.id) ? <IconBookmarkFilled onClick={handleSaveJob} className="cursor-pointer text-sky-400" stroke={1.5} /> : <IconBookmark onClick={handleSaveJob} className="cursor-pointer text-mine-shaft-300" stroke={1.5} /> }
         </div>
     <div className="flex gap-2 [&>div]:py-1 [&>div]:px-2 [&>div]:bg-mine-shaft-800
      [&>div]:text-sky-400 [&>div]:rounded-lg text-xs">
@@ -63,7 +63,7 @@ const Card=(props:any) =>{
         </div>
     }
     <Link to={`/jobs/${props.id}`}>  
-        <Button fullWidth color="brightSun.4" variant="outline">View Job</Button>  
+        <Button fullWidth color="sky.4" variant="outline">View Job</Button>  
     </Link>
     </div>
 }

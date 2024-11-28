@@ -79,7 +79,7 @@ const JobCards = (props: any) => {
         </div>
       </div>
       <Link to={`/jobs/${props.id}`}>
-        <Button fullWidth color="sky.4" variant="outline">
+        <Button fullWidth color="blue.4" variant="outline">
           View Jobs
         </Button>
       </Link>

@@ -11,7 +11,7 @@ const Talents=() =>{
     const filter = useSelector((state:any)=>state.filter);
     const[filteredTalents, setFilteredTalents] = useState<any>([]);
     useEffect(()=>{
-        // resetFilter()
+        dispatch(resetFilter())
         getAllProfiles().then((res)=>{
             console.log(res)
             setTalents(res);
@@ -20,12 +20,43 @@ const Talents=() =>{
         })
     }, [])
     useEffect(() => {  
-        let filterTalent = talents; // this use for the search bar at for filter search and sorting
-        setFilteredTalents(talents);  
+        let filterTalent = talents; // Initialize filtered talents from full list
+      
+        setFilteredTalents(talents); // Reset filtered talents
         console.log(filter);  
-        if(filter.name)filterTalent = filterTalent.filter((talent : any) => talent.name.toLowerCase().includes(filter.name.toLowerCase()));
-        setFilteredTalents(filterTalent);
-    }, [filter, talents]);
+      
+        // Filter by name
+        if (filter.name) {
+          filterTalent = filterTalent.filter((talent: any) =>
+            talent.name?.toLowerCase().includes(filter.name.toLowerCase())
+          );
+        }
+      
+        // Filter by "Job Title"
+        if (filter["Job Title"] && filter["Job Title"].length > 0) {
+          filterTalent = filterTalent.filter((talent: any) => 
+            filter["Job Title"]?.some((title: any) =>
+              talent.jobTitle?.toLowerCase().includes(title.toLowerCase())
+            )
+          );
+          if (filter.Location && Array.isArray(filter.Location) && filter.Location.length > 0) {  
+            filterTalent = filterTalent.filter((talent: any) => 
+              filter.Location.some((location: any) => 
+                talent.location?.toLowerCase().includes(location.toLowerCase())));  
+          }  
+          
+          if (filter.Skills && Array.isArray(filter.Skills) && filter.Skills.length > 0) {  
+            filterTalent = filterTalent.filter((talent: any) => 
+              filter.Skills.some((talentskill: any) => 
+                talent.skills?.includes(talentskill)));  
+          } 
+         }
+         if(filter.exp && filter.exp.length>0){  
+            filterTalent=filterTalent.filter((talent:any)=>filter.exp[0]<=talent.totalExp && talent.totalExp<=filter.exp[1]);  
+        }
+            setFilteredTalents(filterTalent);
+        }, [filter, talents]);
+      
 
     return <div className="p-5">
         <div className="flex justify-between">
@@ -34,9 +65,13 @@ const Talents=() =>{
         </div>
         <div className="mt-10 flex flex-wrap gap-5 justify-evenly">
             {
-                talents.length > 0 ? talents.map((talent:any, index:any)=>
-                 <TalentCard key={index} {...talent}/>): <div className="text-xl font-semibold">No talent Found</div>
-                
+               filteredTalents.length ? (
+                filteredTalents.map((talent: any, index: any) => (
+                  <TalentCard key={talent.id || index} {...talent} />
+                ))
+              ) : (
+                <div className="text-xl font-semibold">No talents found.</div>
+              ) 
             }
         </div>
     </div>

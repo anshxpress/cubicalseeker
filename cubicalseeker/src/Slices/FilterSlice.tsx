@@ -5,12 +5,11 @@ const filterSlice = createSlice({
   initialState: {},  
   reducers: {  
     updateFilter: (state, action) => {  
-      state = { ...state, ...action.payload };  
-      console.log(state);
+      state = { ...state, ...action.payload };
       return state;  
     },  
     resetFilter: (state) => {  
-      state = [];  
+      state = {};
       return state;  
     }  
   }  

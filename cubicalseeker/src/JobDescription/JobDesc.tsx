@@ -14,11 +14,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeProfile } from "../Slices/ProfileSlice";
 import { useEffect, useState } from "react";
 import { postJob } from "../Services/JobService";
-import {
-  errorNotificaton,
-  successMessage,
-} from "../SignupLogin/NotificationService";
-import { errorMonitor } from "stream";
+import { errorNotificaton, successMessage,} from "../SignupLogin/NotificationService";
+
 
 const JobDesc = (props: any) => {
   const profile = useSelector((state: any) => state.profile);
@@ -56,7 +53,7 @@ const JobDesc = (props: any) => {
   };
   return (
     <div>
-      <div className="w-2/3">
+      <div className="">
         <div className="flex justify-between item-center">
           <div className="flex items-center gap-2">
             <div className="p-3 bg-mine-shaft-800 rounded-xl flex">
@@ -74,45 +71,24 @@ const JobDesc = (props: any) => {
               {props.applicants ? props.applicants.length : 0} applicant
             </div>
           </div>
-          <div className="flex flex-col gap-2 items-end">
-            {(props.edit || !applied) && (
-              <Link
-                to={
-                  props.edit ? `/post-job${props.id}` : `/apply-job/${props.id}`
-                }
-              >
-                <Button color="blue.4" size="sm" variant="light">
-                  {props.closed ? "Reopen" : props.edit ? "Edit" : "Apply"}
-                </Button>
-              </Link>
-            )}
+          <div className="flex flex-col gap-2 items-center">  
+               {(props.edit || applied) && <Link to={props.edit?`/post-jobs/${props.id}`:`/apply_job/${props.id}`} >  
+                 <Button color="blue.4" size="sm" variant="light">  
+                     {props.closed?"Reopen":props.edit?"Edit":"Apply"}  
+                   </Button>  
+            </Link>} 
             {!props.edit && applied && (
               <Button color="green.4" size="sm" variant="light">
                 {props.edit ? "Edit" : "Applied"}
               </Button>
             )}
-            {props.edit && !props.closed ? (
-              <Button
-                color="red.4"
-                onClick={handleClose}
-                size="sm"
-                variant="light"
-              >
-                Close
-              </Button>
-            ) : profile.savedJobs?.includes(props.id) ? (
-              <IconBookmarkFilled
-                onClick={handleSaveJob}
-                className="cursor-pointer text-bright-sun-400"
-                stroke={1.5}
-              />
-            ) : (
-              <IconBookmark
-                onClick={handleSaveJob}
-                className="cursor-pointer text-bright-sun-400 hover:text-bright-sun-400 text-mine-shaft-300"
-                stroke={1.5}
-              />
-            )}
+            {props.edit && !props.closed ? <Button color="red.4" onClick={handleClose}
+             size="sm" variant="light">Close</Button> :
+              profile.savedJobs?.includes(props.id) ? 
+              <IconBookmarkFilled onClick={handleSaveJob} 
+              className="cursor-pointer text-sky-400" stroke={1.5} /> : 
+              <IconBookmark onClick={handleSaveJob}
+             className="cursor-pointer hover:text-sky-400 text-mine-shaft-300" stroke={1.5} />}
           </div>
         </div>
       </div>
@@ -159,7 +135,6 @@ const JobDesc = (props: any) => {
         <Divider my="xl" color="blue.5" />
         <div className="text-xl font-semibold mb-5">About</div>
         <div
-        
           className="[&_h4]:text-xl [&_*]:text-mine-shaft-300 [&_li]:marker:text-sky-400 [&_li]:mb-1 [&_h4]:my-5 [&_h4]:font-semibold
                  [&_h4]:text-mine-shaft-200 [&_p]:text-justify"
           dangerouslySetInnerHTML={{ __html: data }}
@@ -167,20 +142,22 @@ const JobDesc = (props: any) => {
         <Divider my="xl" color="blue.5" />
         <div>
           <div className="text-xl font-semibold mb-5">About the Company</div>
-          <div className="flex justify-between">
-            <div className="flex gap-2 items-center">
-              <div className="p-3 bg-mine-shaft-800 rounded-xl">
-                <img
-                  className="h-9"
-                  src={`/Icons/${props.company}.png`}
-                  alt=""
-                />
-              </div>
-              <div className="flex flex-col">
-                <div className="font-medium text-2xl">{props.company}</div>
-                <div className=" text-mine-shaft-300">
-                  {timeAgo(props?.postTime)} &bull;{" "}
-                  {props.applicants ? props.applicants.length : 0} applicants
+          <div>
+            <div className="flex justify-between">
+              <div className="flex">
+                <div className="p-3 mr-4 bg-mine-shaft-800 rounded-xl">
+                  <img
+                    className="h-9"
+                    src={`/Icons/${props.company}.png`}
+                    alt=""
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <div className="font-medium text-2xl">{props.company}</div>
+                  <div className=" text-mine-shaft-300">
+                    {timeAgo(props?.postTime)} &bull;{" "}
+                    {props.applicants ? props.applicants.length : 0} applicants
+                  </div>
                 </div>
               </div>
               <Link to={`/company/${props.company}`}>

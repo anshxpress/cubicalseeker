@@ -32,7 +32,7 @@ const handleSubmit = async () => {
       navigate("/job-history")
     }).catch((err)=>{  
       setSubmit(false);  
-      errorNotificaton("Error",err.response.data.error.message);  
+      errorNotificaton("Error",err.response.data.errorMessage);  
   })
 }
 const form = useForm({  
