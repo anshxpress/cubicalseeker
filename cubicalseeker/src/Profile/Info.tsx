@@ -1,4 +1,4 @@
-import { ActionIcon } from "@mantine/core";
+import { ActionIcon, NumberInput } from "@mantine/core";
 import {
   IconFilePlus,
   IconEdit,
@@ -6,6 +6,7 @@ import {
   IconMapPins,
   IconCheck,
   IconX,
+  IconBriefcase2,
 } from "@tabler/icons-react";
 import SelectInput from "./SelectInput";
 import fields from "../Data/Profile";
@@ -24,7 +25,7 @@ const Info = () => {
 
   const form = useForm({
     mode: "controlled",
-    initialValues: { jobTitle: "", company: "", location: "" },
+    initialValues: { jobTitle: "", company: "", location: "", totalExp : 1 },
   });
 
   const handleClick = () => {
@@ -34,6 +35,7 @@ const Info = () => {
         jobTitle: profile?.jobTitle || "",
         company: profile?.company || "",
         location: profile?.location || "",
+        totalExp: profile?.totalExp || ""
       });
     } else {
       setEdit(false);
@@ -84,7 +86,11 @@ const Info = () => {
               <SelectInput form={form} name="jobTitle" {...select[0]} />
               <SelectInput form={form} name="company" {...select[1]} />
             </div>
-            <SelectInput form={form} name="location" {...select[2]} />
+            <div>
+                <SelectInput form={form} name="location" {...select[2]} />
+                <NumberInput  label = "Exprience" withAsterisk hideControls clampBehavior="strict" min={1} max={50} {...form.getInputProps('totalExp')} />
+            </div>
+            
           </>
         )}
         <div className="text-xl flex gap-1 items-center">
@@ -93,6 +99,9 @@ const Info = () => {
         </div>
         <div className="flex gap-1 text-lg text-mine-shaft-300 items-center">
           <IconMapPins className="h-5 w-5" stroke={1.5} /> {profile?.location || "Not specified"} {/* Fallback value */}
+        </div>
+        <div className="flex gap-1 text-lg text-mine-shaft-300 items-center">
+          <IconBriefcase className="h-5 w-5" stroke={1.5} />Experience: {profile?.totalExp || "Not specified"} {/* Fallback value */}
         </div>
       </div>
     </>
