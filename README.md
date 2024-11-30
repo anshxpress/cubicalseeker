@@ -1,7 +1,3 @@
-To update the README content for your project, "Cubical Seeker," on GitHub, you can use the following template. This template is tailored to reflect the features and structure of a typical project README while maintaining a professional tone. Please adjust the specific details such as features, tech stack, and team members according to your project's specifics.
-
----
-
 # 🏠 **Cubical Seeker: Your Comprehensive Workspace Finder**
 
 **Cubical Seeker** is an innovative platform designed to connect individuals and businesses with available workspaces. Whether you're seeking a private office, a shared desk, or a co-working space, Cubical Seeker is your go-to solution!
