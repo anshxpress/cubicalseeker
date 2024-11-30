@@ -9,6 +9,7 @@ const getProfile = async (id: number) => {
 
 const updateProfile = async (profile: any) => {
     const { id, ...profileData } = profile;  // Extract id and rest of the profile data
+    console.log(id, profileData)
     return axios.put(`${base_url}update/${id}`, profileData)
         .then(res => res.data)
         .catch(error => { throw error; });

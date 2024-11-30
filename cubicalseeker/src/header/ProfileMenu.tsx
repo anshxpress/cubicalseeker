@@ -63,6 +63,3 @@ const handleLogout =()=>{
   );
 }export default ProfileMenu;
 
-function setOpened(opened: boolean): void {
-    throw new Error('Function not implemented.');
-}

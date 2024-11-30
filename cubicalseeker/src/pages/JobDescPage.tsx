@@ -14,6 +14,7 @@ const JobDescPage=()=>{
         window.scrollTo(0,0);
         getJob(id).then((res)=>{
             setJob(res);
+            console.log(res)
         }).catch((err)=>{
             console.log(err);
         })

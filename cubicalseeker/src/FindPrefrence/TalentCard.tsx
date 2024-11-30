@@ -29,7 +29,7 @@ const TalentCard = (props: any) => {
     if (props.applicantId)
       getProfile(props.applicantId)
         .then((res) => {
-          console.log(res);
+          // console.log(res);
           setProfile(res);
         })
         .catch((err) => {
@@ -153,7 +153,7 @@ const TalentCard = (props: any) => {
                   Schedule
                 </Button>
               ) : (
-                <Button color="blue.4" variant="light" fullWidth>
+                <Button onClick={()=>window.location.href=`mailto:${profile.email}`} color="blue.4" variant="light" fullWidth>
                   Message
                 </Button>
               )}

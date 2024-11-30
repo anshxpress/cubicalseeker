@@ -44,6 +44,7 @@ const Info = () => {
 
   const handleSave = () => {
     setEdit(false);
+    console.log(form.getValues());
     let updatedProfile = { ...profile, ...form.getValues() };
     dispatch(changeProfile(updatedProfile));
     console.log(updatedProfile);

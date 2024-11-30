@@ -14,8 +14,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeProfile } from "../Slices/ProfileSlice";
 import { useEffect, useState } from "react";
 import { postJob } from "../Services/JobService";
-import { errorNotificaton, successMessage,} from "../SignupLogin/NotificationService";
-
+import {
+  errorNotificaton,
+  successMessage,
+} from "../SignupLogin/NotificationService";
 
 const JobDesc = (props: any) => {
   const profile = useSelector((state: any) => state.profile);
@@ -34,13 +36,16 @@ const JobDesc = (props: any) => {
     dispatch(changeProfile(updatedProfile));
   };
   useEffect(() => {
-    if (
-      props.applicants?.filter(
-        (applicant: any) => applicant.applicantId == user.id
-      ).length > 0
-    ) {
-      setApplied(true);
-    } else setApplied(false);
+    if (props.applicants !== null) {
+      console.log(props)
+      if (
+        props?.applicants?.filter(
+          (applicant: any) => applicant.applicantId == user.id
+        ).length > 0
+      ) {
+        setApplied(true);
+      } else setApplied(false);
+    }
   }, [props]);
   const handleClose = () => {
     postJob({ ...props, jobStatus: "CLOSED" })
@@ -64,31 +69,54 @@ const JobDesc = (props: any) => {
               />
             </div>
             <div className="flex flex-col gap-2">
-              <div className="font-semibold text-2xl">{props.jobtitle}</div>
+              <div className="font-semibold text-2xl">{props.jobTitle}</div>
             </div>
             <div className="text-lg text-mine-shaft-300">
               {props.company} &bull; {timeAgo(props.postTime)} &bull;{" "}
               {props.applicants ? props.applicants.length : 0} applicant
             </div>
           </div>
-          <div className="flex flex-col gap-2 items-center">  
-               {(props.edit || applied) && <Link to={props.edit?`/post-jobs/${props.id}`:`/apply_job/${props.id}`} >  
-                 <Button color="blue.4" size="sm" variant="light">  
-                     {props.closed?"Reopen":props.edit?"Edit":"Apply"}  
-                   </Button>  
-            </Link>} 
+          <div className="flex flex-col gap-2 items-center">
+            {(props.edit || !applied) && (
+              <Link
+                to={
+                  props.edit
+                    ? `/post-jobs/${props.id}`
+                    : `/apply-job/${props.id}`
+                }
+              >
+                <Button color="blue.4" size="sm" variant="light">
+                  {props.closed ? "Reopen" : props.edit ? "Edit" : "Apply"}
+                </Button>
+              </Link>
+            )}
             {!props.edit && applied && (
               <Button color="green.4" size="sm" variant="light">
                 {props.edit ? "Edit" : "Applied"}
               </Button>
             )}
-            {props.edit && !props.closed ? <Button color="red.4" onClick={handleClose}
-             size="sm" variant="light">Close</Button> :
-              profile.savedJobs?.includes(props.id) ? 
-              <IconBookmarkFilled onClick={handleSaveJob} 
-              className="cursor-pointer text-sky-400" stroke={1.5} /> : 
-              <IconBookmark onClick={handleSaveJob}
-             className="cursor-pointer hover:text-sky-400 text-mine-shaft-300" stroke={1.5} />}
+            {props.edit && !props.closed ? (
+              <Button
+                color="red.4"
+                onClick={handleClose}
+                size="sm"
+                variant="light"
+              >
+                Close
+              </Button>
+            ) : profile.savedJobs?.includes(props.id) ? (
+              <IconBookmarkFilled
+                onClick={handleSaveJob}
+                className="cursor-pointer text-sky-400"
+                stroke={1.5}
+              />
+            ) : (
+              <IconBookmark
+                onClick={handleSaveJob}
+                className="cursor-pointer hover:text-sky-400 text-mine-shaft-300"
+                stroke={1.5}
+              />
+            )}
           </div>
         </div>
       </div>
