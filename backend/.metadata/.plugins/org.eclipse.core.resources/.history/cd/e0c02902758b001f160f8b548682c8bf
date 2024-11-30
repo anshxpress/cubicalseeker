@@ -1,0 +1,5 @@
+package com.cubicalseeker.entity;
+
+public class User {
+
+}
