@@ -72,32 +72,31 @@ Discover the ideal workspace with advanced search options, seamless communicatio
 
 2. **Set up the backend**
 
-   - Navigate to the `api` folder:
+   - Navigate to the `backend/cubical-seeker` folder:
 
    ```bash
-   cd api
+   cd backend/cubical-seeker
    ```
 
-   - Install dependencies and start the server:
+   - Start the Spring Boot application:
 
    ```bash
-   npm install
-   npm start
+   ./mvnw spring-boot:run
    ```
 
 3. **Set up the frontend**
 
-   - Navigate to the `frontend` folder:
+   - Navigate to the `cubicalseeker` folder:
 
    ```bash
-   cd frontend
+   cd cubicalseeker
    ```
 
    - Install dependencies and start the development server:
 
    ```bash
    npm install
-   npm run dev
+   npm start
    ```
 
 4. **Environment Variables**
