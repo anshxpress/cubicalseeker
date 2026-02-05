@@ -1,5 +1,5 @@
 import axios from "axios"
-const base_url = "http://localhost:8080/user/"
+const base_url = process.env.REACT_APP_BASE_URL ? `${process.env.REACT_APP_BASE_URL}/user/` : "http://localhost:8080/user/";
 
 const registerUser = async(user:any)=> {
     return axios.post(`${base_url}register`, user)

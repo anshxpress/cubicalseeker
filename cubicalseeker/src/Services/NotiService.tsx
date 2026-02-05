@@ -1,5 +1,5 @@
 import axios from "axios";
-const base_url = "http://localhost:8080/notification/";
+const base_url = process.env.REACT_APP_BASE_URL ? `${process.env.REACT_APP_BASE_URL}/notification/` : "http://localhost:8080/notification/";
 
 const getNotification = async (id: any) => {
     return axios.get(`${base_url}get/${id}`)

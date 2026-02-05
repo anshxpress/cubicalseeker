@@ -1,5 +1,5 @@
 import axios from "axios"
-const base_url = "http://localhost:8080/profiles/"
+const base_url = process.env.REACT_APP_BASE_URL ? `${process.env.REACT_APP_BASE_URL}/profiles/` : "http://localhost:8080/profiles/";
 
 const getProfile = async (id: number) => {  
     return axios.get(`${base_url}get/${id}`)  

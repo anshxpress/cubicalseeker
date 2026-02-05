@@ -1,7 +1,7 @@
 // post job service method where all job get posting and all job visible
 
 import axios from "axios";  
-const base_url="http://localhost:8080/jobs/";  
+const base_url = process.env.REACT_APP_BASE_URL ? `${process.env.REACT_APP_BASE_URL}/jobs/` : "http://localhost:8080/jobs/";
 const postJob = async (job:any)=>{  
     console.log(job);
     return axios.post(`${base_url}post`, job)  
