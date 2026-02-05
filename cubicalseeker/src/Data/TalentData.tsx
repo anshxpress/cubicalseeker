@@ -5,69 +5,107 @@ const searchFields=[
     { title: "Location", icon: IconMapPin, options: ['Delhi', 'Mumbai', 'Bangalore', 'Hyderabad', 'Chennai', 'Kolkata', 'Pune', 'Ahmedabad'] },
     { title: "Skills", icon: IconRecharging, options: ["HTML","CSS","JavaScript","React","Angular","Node.js","Python","Java","Ruby","PHP","SQL","MongoDB","PostgreSQL","Git","API Development","Testing and Debugging","Agile Methodologies","DevOps","AWS","Azure","Google Cloud"] },
 ]
+
 const talents = [
   {
-    "name": "Rohan Sharma",
-    "role": "Software Engineer",
-    "company": "Google",
-    "topSkills": ["React", "SpringBoot", "MongoDB"],
-    "about": "As a Software Engineer at Google, I specialize in building scalable and high-performance applications. My expertise lies in integrating front-end and back-end technologies to deliver seamless user experiences. With a strong foundation in React and SpringBoot, and a focus on MongoDB for database solutions, I am passionate about leveraging the latest technologies to solve complex problems and drive innovation. My goal is to create impactful software that enhances productivity and meets user needs effectively.",
-    "expectedCtc": "₹48 - 60LPA",
-    "location": "Bangalore, India",
-    "image": "avatar"
+    id: 1,
+    name: "Rohan Sharma",
+    jobTitle: "Software Engineer",
+    company: "Google",
+    skills: ["React", "SpringBoot", "MongoDB", "Java"],
+    about: "As a Software Engineer at Google, I specialize in building scalable and high-performance applications. My expertise lies in integrating front-end and back-end technologies to deliver seamless user experiences. Passionate about cloud computing and distributed systems.",
+    expectedCtc: "₹48 - 60LPA",
+    location: "Bangalore, India",
+    totalExp: 4,
+    postTime: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString()
   },
   {
-    "name": "Aisha Khan",
-    "role": "Frontend Developer",
-    "company": "Facebook",
-    "topSkills": ["HTML", "CSS", "JavaScript"],
-    "about": "As a Frontend Developer at Facebook, I focus on creating visually appealing and highly interactive web applications. My expertise in HTML, CSS, and JavaScript allows me to build responsive and user-friendly interfaces that enhance user experience. I am dedicated to staying current with the latest trends and best practices in web development to ensure optimal performance and accessibility. I thrive in collaborative environments where I can contribute to innovative projects and deliver solutions that meet user expectations.",
-    "expectedCtc": "₹40 - 55LPA",
-    "location": "Hyderabad, India",
-    "image": "avatar1"
+    id: 2,
+    name: "Aisha Khan",
+    jobTitle: "Frontend Developer",
+    company: "Meta",
+    skills: ["HTML", "CSS", "JavaScript", "React"],
+    about: "Frontend Developer at Meta, focused on creating visually appealing and highly interactive web interfaces. I am dedicated to web accessibility and performance optimization, ensuring inclusive experiences for global users.",
+    expectedCtc: "₹40 - 55LPA",
+    location: "Hyderabad, India",
+    totalExp: 3,
+    postTime: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString()
   },
   {
-    "name": "Rahul Patel",
-    "role": "Backend Developer",
-    "company": "Amazon",
-    "topSkills": ["Node.js", "Express", "MySQL"],
-    "about": "As a Backend Developer at Amazon, I specialize in server-side development and database management. My skills in Node.js and Express allow me to build robust and scalable APIs, while my experience with MySQL ensures efficient data handling and storage. I am passionate about optimizing backend processes to support high-traffic applications and improve system performance. My approach to development emphasizes reliability, security, and the ability to adapt to evolving technological demands.",
-    "expectedCtc": "₹50 - 65LPA",
-    "location": "Chennai, India",
-    "image": "avatar"
+    id: 3,
+    name: "Rahul Patel",
+    jobTitle: "Backend Developer",
+    company: "Amazon",
+    skills: ["Node.js", "Express", "MySQL", "AWS"],
+    about: "Backend Developer at Amazon specializing in server-side logic and database management. I build robust APIs and microservices that power high-traffic e-commerce platforms. Experienced in AWS Lambda and DynamoDB.",
+    expectedCtc: "₹50 - 65LPA",
+    location: "Chennai, India",
+    totalExp: 5,
+    postTime: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString()
   },
   {
-    "name": "Diya Mehta",
-    "role": "UX/UI Designer",
-    "company": "Adobe",
-    "topSkills": ["Figma", "Sketch", "InVision"],
-    "about": "As a UX/UI Designer at Adobe, I am dedicated to crafting visually compelling and user-centric designs. My expertise in Figma, Sketch, and InVision allows me to create intuitive interfaces that enhance user experience across digital platforms. I am passionate about translating complex ideas into clean and effective designs that align with user needs and business goals. My design process involves thorough research, user testing, and iterative design to ensure the highest quality and user satisfaction.",
-    "expectedCtc": "₹35 - 50LPA",
-    "location": "Mumbai, India",
-    "image": "avatar2"
+    id: 4,
+    name: "Diya Mehta",
+    jobTitle: "UX/UI Designer",
+    company: "Adobe",
+    skills: ["Figma", "Sketch", "Prototyping", "Wireframing"],
+    about: "UX/UI Designer at Adobe with a passion for user-centric design. I transform complex requirements into intuitive and beautiful interfaces. Expert in design systems and collaborative workflows with engineering teams.",
+    expectedCtc: "₹35 - 50LPA",
+    location: "Mumbai, India",
+    totalExp: 4,
+    postTime: new Date(Date.now() - 10 * 24 * 60 * 60 * 1000).toISOString()
   },
   {
-    "name": "Chirag Jain",
-    "role": "Full Stack Developer",
-    "company": "Microsoft",
-    "topSkills": ["Python", "Django", "React"],
-    "about": "As a Full Stack Developer at Microsoft, I work on developing end-to-end solutions for web applications. My expertise in Python and Django for backend development, combined with React for frontend, allows me to create cohesive and high-performing applications. I am adept at managing the entire development lifecycle, from designing intuitive user interfaces to implementing robust server-side logic. My goal is to deliver comprehensive solutions that meet both user needs and business objectives.",
-    "expectedCtc": "₹45 - 60LPA",
-    "location": "Pune, India",
-    "image": "avatar"
+    id: 5,
+    name: "Chirag Jain",
+    jobTitle: "Full Stack Developer",
+    company: "Microsoft",
+    skills: ["Python", "Django", "React", "Azure"],
+    about: "Full Stack Developer at Microsoft delivering end-to-end web solutions. I leverage Python/Django for backend security and React for responsive frontends. Committed to writing clean, maintainable code and mentoring junior devs.",
+    expectedCtc: "₹45 - 60LPA",
+    location: "Pune, India",
+    totalExp: 6,
+    postTime: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString()
   },
   {
-    "name": "Fiza Khan",
-    "role": "DevOps Engineer",
-    "company": "Netflix",
-    "topSkills": ["Docker", "Kubernetes", "AWS"],
-    "about": "As a DevOps Engineer at Netflix, I focus on automating infrastructure and optimizing deployment processes to support scalable applications. My expertise in Docker, Kubernetes, and AWS enables me to manage and streamline complex cloud environments efficiently. I am dedicated to improving operational efficiency and reliability through continuous integration and delivery practices. My role involves collaborating with development teams to ensure seamless deployment and maintenance of applications, enhancing overall system performance and resilience.",
-    "expectedCtc": "₹50 - 65LPA",
-    "location": "Delhi, India",
-    "image": "avatar1"
+    id: 6,
+    name: "Fiza Khan",
+    jobTitle: "DevOps Engineer",
+    company: "Netflix",
+    skills: ["Docker", "Kubernetes", "AWS", "CI/CD"],
+    about: "DevOps Engineer at Netflix focused on automating deployment pipelines and ensuring high availability. I optimize cloud infrastructure using Terraform and Ansible to support massive scale streaming services.",
+    expectedCtc: "₹50 - 65LPA",
+    location: "Delhi, India",
+    totalExp: 5,
+    postTime: new Date(Date.now() - 8 * 24 * 60 * 60 * 1000).toISOString()
   },
-  ];
-  const profile={
+  {
+    id: 7,
+    name: "Arjun Singh",
+    jobTitle: "Data Scientist",
+    company: "Spotify",
+    skills: ["Python", "Machine Learning", "SQL", "Pandas"],
+    about: "Data Scientist at Spotify using machine learning to personalize user listening experiences. I treat data as a product, building predictive models that drive engagement and retention. Experienced in NLP and recommendation systems.",
+    expectedCtc: "₹45 - 55LPA",
+    location: "Bangalore, India",
+    totalExp: 3,
+    postTime: new Date(Date.now() - 4 * 24 * 60 * 60 * 1000).toISOString()
+  },
+  {
+    id: 8,
+    name: "Priya Das",
+    jobTitle: "Product Manager",
+    company: "Flipkart",
+    skills: ["Agile", "Roadmapping", "Jira", "Analytics"],
+    about: "Product Manager at Flipkart leading cross-functional teams to launch innovative e-commerce features. I bridge the gap between business goals and technical feasibility, ensuring timely delivery of high-value products.",
+    expectedCtc: "₹40 - 55LPA",
+    location: "Bangalore, India",
+    totalExp: 7,
+    postTime: new Date(Date.now() - 12 * 24 * 60 * 60 * 1000).toISOString()
+  }
+];
+
+const profile={
     name: "Rohan Sharma",
     role: "Software Engineer",
     company: "Google",
@@ -106,8 +144,6 @@ const talents = [
         certificateId: "MS12345AZ"
       }
     ]
-  }
-  
-  
-  
+}
+
 export {searchFields, talents, profile};

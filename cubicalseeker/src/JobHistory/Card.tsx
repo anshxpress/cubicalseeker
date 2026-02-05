@@ -47,7 +47,7 @@ const Card=(props:any) =>{
           &#8377;{props.packageOffered} LPA
         </div>
         <div className="flex gap-1 text-xs text-mine-shaft-400 items-center">
-            <IconCalendarClock className="h-5 w-5" stroke={1.5}/> {props.applied || props.interview?"Applied":props.offered?"Interviewed":"Posted"} {timeAgo(props.postTime)} days ago
+            <IconCalendarClock className="h-5 w-5" stroke={1.5}/> {props.applied ? "Applied" : props.offered ? "Offered" : props.interview ? "Interviewing" : "Posted"} {timeAgo(props.postTime)}
         </div>
     </div>
     {(props.offered || props.interview) && <Divider size="xs" color="blue.7"/>}

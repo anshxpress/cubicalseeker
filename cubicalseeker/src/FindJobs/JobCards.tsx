@@ -29,7 +29,7 @@ const JobCards = (props: any) => {
   };
 
   return (
-    <div className="bg-mine-shaft-900 p-3 w-72 flex flex-col gap-3 rounded-xl hover:shadow-[0_0_5px_1px_blue] !shadow-sky-400">
+    <div className="bg-mine-shaft-900 p-3 w-72 flex flex-col gap-3 rounded-xl hover:shadow-[0_0_5px_1px_blue] hover:scale-[1.02] transition duration-300 ease-in-out !shadow-sky-400 h-full justify-between">
       <div className="flex justify-evenly">
         <div className="flex gap-2 items-justify">
           <div className="p-2 bg-mine-shaft-800 rounded-md">
@@ -41,7 +41,7 @@ const JobCards = (props: any) => {
               <Link className="hover:text-mine-shaft-200" to="/company">
                 {props.company}
               </Link>{" "}
-              &bull; {props.applicants?.length || 0} Applicants
+              &bull; {props.applicants ? (Array.isArray(props.applicants) ? props.applicants.length : props.applicants) : 0} Applicants
             </div>
           </div>
         </div>
@@ -82,7 +82,7 @@ const JobCards = (props: any) => {
       </div>
       <Link to={`/jobs/${props.id}`}>
         <Button fullWidth color="blue.4" variant="outline">
-          View Jobs
+          View Job
         </Button>
       </Link>
     </div>

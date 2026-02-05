@@ -18,7 +18,7 @@ const JobHistory=()=>{
           let found=false;
           job.applicants?.forEach((applicant:any)=>{  
             console.log(applicant)
-            if(applicant.applicantId==user.id &&  
+            if(applicant.applicantId==user?.id &&  
             applicant.applicationStatus=="APPLIED"){  
                 found=true;  
             }  
@@ -38,7 +38,7 @@ const JobHistory=()=>{
             setShowList(jobList.filter((job:any)=>{
                 let found=false;
                 job.applicants?.forEach((applicant:any)=>{  
-                  if(applicant.applicantId==user.id &&  
+                  if(applicant.applicantId==user?.id &&  
                   applicant.applicationStatus==value){  
                       found=true;  
                   }  
@@ -61,7 +61,7 @@ const JobHistory=()=>{
       <Tabs.Panel value={activeTab} className="[&>div]:w-full">
       <div className="mt-10 flex flex-wrap gap-5">
         {
-           showList.map((item:any, index:any)=> <Card key={index}{...item} {...{[activeTab.toLowerCase]:true}} />)
+           showList.map((item:any, index:any)=> <Card key={index} {...item} {...{[activeTab=="INTERVIEWING"?"interview":activeTab.toLowerCase()]:true}} />)
         }
         </div>
       </Tabs.Panel>

@@ -4,21 +4,22 @@ import TalentCard from "./TalentCard";
 import { getAllProfiles } from "../Services/ProfileService";
 import { useDispatch, useSelector } from "react-redux";
 import { resetFilter } from "../Slices/FilterSlice";
+import { talents as talentsData } from "../Data/TalentData";
 
 const Talents=() =>{
     const dispatch = useDispatch();
-    const[talents, setTalents] = useState<any>([]);
+    const[talents, setTalents] = useState<any>(talentsData); // Use mock data
     const filter = useSelector((state:any)=>state.filter);
     const sort = useSelector((state: any) => state.sort);
     const[filteredTalents, setFilteredTalents] = useState<any>([]);
     useEffect(()=>{
         dispatch(resetFilter())
-        getAllProfiles().then((res)=>{
-            console.log(res)
-            setTalents(res);
-        }).catch((err)=>{
-            console.log(err);
-        })
+        // getAllProfiles().then((res)=>{
+        //     console.log(res)
+        //     setTalents(res);
+        // }).catch((err)=>{
+        //     console.log(err);
+        // })
     }, [])
     useEffect(()=>{
       if (sort === "Most Recent") {  

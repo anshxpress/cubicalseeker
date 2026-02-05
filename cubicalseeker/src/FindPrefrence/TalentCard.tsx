@@ -69,7 +69,7 @@ const TalentCard = (props: any) => {
   // console.log(profile, props)
   const ref = useRef<HTMLInputElement>(null);
   return (
-    <div className="bg-mine-shaft-900 p-4 w-96 flex flex-col gap-3 rounded-xl hover:shadow-[0_0_5px_1px_blue] !shadow-sky-400">
+    <div className="bg-mine-shaft-900 p-4 w-96 flex flex-col gap-3 rounded-xl hover:shadow-[0_0_5px_1px_blue] hover:scale-[1.02] transition duration-300 ease-in-out !shadow-sky-400">
       <div className="flex justify-between">
         <div className="flex gap-2 items-center">
           <div className="p-2 bg-mine-shaft-800 rounded-full">
@@ -125,7 +125,7 @@ const TalentCard = (props: any) => {
       ) : (
         <div className="flex justify-between">
           <div className=" text-mine-shaft-300">
-            Exp:{props.totalExp ? props.totalExp : 1} Year
+            Exp:{props.totalExp ? props.totalExp : 1} Year{props.totalExp !== 1 && 's'}
           </div>
           <div className="flex gap-1 text-xs text-mine-shaft-400 items-center">
             <IconMapPins className="h-5 w-5" stroke={1.5} /> {profile?.location}

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { jobList } from "../Data/JobsData";
+import { jobList as jobs } from "../Data/JobsData";
 import JobCards from "./JobCards";
 import Sort from "./Sort";
 import { getAllJobs } from "../Services/JobService";
@@ -9,17 +9,17 @@ import { resetSort } from "../Slices/SortSlice";
 
 const Jobs=() =>{
     const dispatch = useDispatch();
-    const[jobList, setJobList] = useState([{}]);
+    const[jobList, setJobList] = useState<any>(jobs); // Use mock data initially
     const filter = useSelector((state:any)=>state.filter);
     const[filteredJobs, setFilteredJobs] = useState<any>([]);
     const [sort, setSort] = useState<string>("Most Recent");
     useEffect(()=>{
         dispatch(resetFilter());
         dispatch(resetSort());
-        getAllJobs().then((res)=>{
-            setJobList(res.filter((job:any)=>job.jobStatus=="ACTIVE"));
-            console.log(res[0]);
-        }).catch((err)=>console.log(err));  
+        // getAllJobs().then((res)=>{
+        //     setJobList(res.filter((job:any)=>job.jobStatus=="ACTIVE"));
+        //     console.log(res[0]);
+        // }).catch((err)=>console.log(err));  
     },[])
     useEffect(()=>{
         if (sort === "Most Recent") {  

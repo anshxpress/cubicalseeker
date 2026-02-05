@@ -1,0 +1,551 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.cubicalseeker:cubical-seeker:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.boot:spring-boot-starter-data-mongodb:jar -> version (?) vs 3.1.1 @ line 65, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------< com.cubicalseeker:cubical-seeker >------------------
+[INFO] Building cubical-seeker 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ cubical-seeker ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ cubical-seeker ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 48 source files with javac [debug parameters release 17] to target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/api/JobAPI.java:[53,45] constructor ResponseDTO in class com.cubicalseeker.dto.ResponseDTO cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/api/JobAPI.java:[63,45] constructor ResponseDTO in class com.cubicalseeker.dto.ResponseDTO cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/dto/JobDTO.java:[38,16] constructor Job in class com.cubicalseeker.entity.Job cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.Long,java.lang.String,java.lang.String,this.appli[...] null,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Long,java.time.LocalDateTime,java.lang.String,java.util.List<java.lang.String>,com.cubicalseeker.dto.JobStatus,java.lang.Long
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/dto/ApplicantDTO.java:[28,24] constructor Applicant in class com.cubicalseeker.entity.Applicant cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.Long,java.lang.String,java.lang.String,java.lang.Long,java.lang.String,this.resum[...] null,java.lang.String,java.time.LocalDateTime,com.cubicalseeker.dto.ApplicantionStatus,java.time.LocalDateTime
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/entity/Applicant.java:[29,24] constructor ApplicantDTO in class com.cubicalseeker.dto.ApplicantDTO cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.Long,java.lang.String,java.lang.String,java.lang.Long,java.lang.String,this.resum[...] null,java.lang.String,java.time.LocalDateTime,com.cubicalseeker.dto.ApplicantionStatus,java.time.LocalDateTime
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/entity/Job.java:[38,16] constructor JobDTO in class com.cubicalseeker.dto.JobDTO cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.Long,java.lang.String,java.lang.String,this.appli[...] null,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Long,java.time.LocalDateTime,java.lang.String,java.util.List<java.lang.String>,com.cubicalseeker.dto.JobStatus,java.lang.Long
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/api/NotificationAPI.java:[36,41] constructor ResponseDTO in class com.cubicalseeker.dto.ResponseDTO cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/entity/Notification.java:[28,24] constructor NotificationDTO in class com.cubicalseeker.dto.NotificationDTO cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.Long,java.lang.Long,java.lang.String,java.lang.String,java.lang.String,com.cubicalseeker.dto.NotificationStatus,java.time.LocalDateTime
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/dto/NotificationDTO.java:[25,24] constructor Notification in class com.cubicalseeker.entity.Notification cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.Long,java.lang.Long,java.lang.String,java.lang.String,java.lang.String,com.cubicalseeker.dto.NotificationStatus,java.time.LocalDateTime
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/api/ProfileAPI.java:[42,27] cannot find symbol
+  symbol:   method setId(java.lang.Long)
+  location: variable profileDTO of type com.cubicalseeker.dto.ProfileDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/dto/ProfileDTO.java:[31,24] constructor Profile in class com.cubicalseeker.entity.Profile cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,this.pictu[...] null,java.lang.Long,java.util.List<java.lang.String>,java.util.List<com.cubicalseeker.dto.Experience>,java.util.List<com.cubicalseeker.dto.Certification>,java.util.List<java.lang.Long>
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/entity/Profile.java:[38,24] constructor ProfileDTO in class com.cubicalseeker.dto.ProfileDTO cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,this.pictu[...] null,java.lang.Long,java.util.List<java.lang.String>,java.util.List<com.cubicalseeker.dto.Experience>,java.util.List<com.cubicalseeker.dto.Certification>,java.util.List<java.lang.Long>
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/api/UserAPI.java:[43,41] constructor ResponseDTO in class com.cubicalseeker.dto.ResponseDTO cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/api/UserAPI.java:[48,45] constructor ResponseDTO in class com.cubicalseeker.dto.ResponseDTO cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/api/UserAPI.java:[53,45] constructor ResponseDTO in class com.cubicalseeker.dto.ResponseDTO cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/dto/UserDTO.java:[34,27] constructor User in class com.cubicalseeker.entity.User cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.Long,java.lang.String,java.lang.String,java.lang.String,com.cubicalseeker.dto.AccountType,java.lang.Long
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/entity/User.java:[31,19] constructor UserDTO in class com.cubicalseeker.dto.UserDTO cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.Long,java.lang.String,java.lang.String,java.lang.String,com.cubicalseeker.dto.AccountType,java.lang.Long
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[32,26] cannot find symbol
+  symbol:   method getId()
+  location: variable jobDTO of type com.cubicalseeker.dto.JobDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[33,31] cannot find symbol
+  symbol:   method setId(java.lang.Long)
+  location: variable jobDTO of type com.cubicalseeker.dto.JobDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[34,31] cannot find symbol
+  symbol:   method setPostTime(java.time.LocalDateTime)
+  location: variable jobDTO of type com.cubicalseeker.dto.JobDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[37,64] cannot find symbol
+  symbol:   method getId()
+  location: variable jobDTO of type com.cubicalseeker.dto.JobDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[38,31] cannot find symbol
+  symbol:   method getJobStatus()
+  location: variable job of type com.cubicalseeker.entity.Job
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[38,78] cannot find symbol
+  symbol:   method getJobStatus()
+  location: variable jobDTO of type com.cubicalseeker.dto.JobDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[38,125] cannot find symbol
+  symbol:   method setPostTime(java.time.LocalDateTime)
+  location: variable jobDTO of type com.cubicalseeker.dto.JobDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[57,46] cannot find symbol
+  symbol:   method getApplicants()
+  location: variable job of type com.cubicalseeker.entity.Job
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[59,53] cannot find symbol
+  symbol:   method getApplicantId()
+  location: variable x of type com.cubicalseeker.entity.Applicant
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[59,84] cannot find symbol
+  symbol:   method getApplicantId()
+  location: variable applicantDTO of type com.cubicalseeker.dto.ApplicantDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[60,29] cannot find symbol
+  symbol:   method setApplicationStatus(com.cubicalseeker.dto.ApplicantionStatus)
+  location: variable applicantDTO of type com.cubicalseeker.dto.ApplicantDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[62,20] cannot find symbol
+  symbol:   method setApplicants(java.util.List<com.cubicalseeker.entity.Applicant>)
+  location: variable job of type com.cubicalseeker.entity.Job
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[74,60] cannot find symbol
+  symbol:   method getId()
+  location: variable application of type com.cubicalseeker.dto.Application
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[75,46] cannot find symbol
+  symbol:   method getApplicants()
+  location: variable job of type com.cubicalseeker.entity.Job
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[76,39] cannot find symbol
+  symbol:   method getApplicantId()
+  location: variable application of type com.cubicalseeker.dto.Application
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[77,67] cannot find symbol
+  symbol:   method getApplicationStatus()
+  location: variable application of type com.cubicalseeker.dto.Application
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[78,47] cannot find symbol
+  symbol:   method getApplicationStatus()
+  location: variable application of type com.cubicalseeker.dto.Application
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[78,137] cannot find symbol
+  symbol:   method getInterviewTime()
+  location: variable application of type com.cubicalseeker.dto.Application
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[82,20] cannot find symbol
+  symbol:   method setApplicants(java.util.List<com.cubicalseeker.entity.Applicant>)
+  location: variable job of type com.cubicalseeker.entity.Job
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/utility/Utilities.java:[37,19] cannot find symbol
+  symbol:   method getSeq()
+  location: variable seq of type com.cubicalseeker.entity.Sequence
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/NotificationServiceImpl.java:[33,28] cannot find symbol
+  symbol:   method setId(java.lang.Long)
+  location: variable notificationDTO of type com.cubicalseeker.dto.NotificationDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/NotificationServiceImpl.java:[34,28] cannot find symbol
+  symbol:   method setTimestamp(java.time.LocalDateTime)
+  location: variable notificationDTO of type com.cubicalseeker.dto.NotificationDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/NotificationServiceImpl.java:[35,28] cannot find symbol
+  symbol:   method setStatus(com.cubicalseeker.dto.NotificationStatus)
+  location: variable notificationDTO of type com.cubicalseeker.dto.NotificationDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/NotificationServiceImpl.java:[53,21] cannot find symbol
+  symbol:   method setStatus(com.cubicalseeker.dto.NotificationStatus)
+  location: variable noti of type com.cubicalseeker.entity.Notification
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[27,24] cannot find symbol
+  symbol:   method setId(java.lang.Long)
+  location: variable profile of type com.cubicalseeker.entity.Profile
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[28,24] cannot find symbol
+  symbol:   method setName(java.lang.String)
+  location: variable profile of type com.cubicalseeker.entity.Profile
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[29,24] cannot find symbol
+  symbol:   method setEmail(java.lang.String)
+  location: variable profile of type com.cubicalseeker.entity.Profile
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[30,24] cannot find symbol
+  symbol:   method setSkills(java.util.ArrayList<java.lang.Object>)
+  location: variable profile of type com.cubicalseeker.entity.Profile
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[31,24] cannot find symbol
+  symbol:   method setExperiences(java.util.ArrayList<java.lang.Object>)
+  location: variable profile of type com.cubicalseeker.entity.Profile
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[32,24] cannot find symbol
+  symbol:   method setCertifications(java.util.ArrayList<java.lang.Object>)
+  location: variable profile of type com.cubicalseeker.entity.Profile
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[34,31] cannot find symbol
+  symbol:   method getId()
+  location: variable profile of type com.cubicalseeker.entity.Profile
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[44,80] cannot find symbol
+  symbol:   method getId()
+  location: variable profileDTO of type com.cubicalseeker.dto.ProfileDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[46,49] cannot find symbol
+  symbol:   method getId()
+  location: variable profileDTO of type com.cubicalseeker.dto.ProfileDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[47,55] cannot find symbol
+  symbol:   method getJobTitle()
+  location: variable profileDTO of type com.cubicalseeker.dto.ProfileDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[48,54] cannot find symbol
+  symbol:   method getCompany()
+  location: variable profileDTO of type com.cubicalseeker.dto.ProfileDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[49,55] cannot find symbol
+  symbol:   method getLocation()
+  location: variable profileDTO of type com.cubicalseeker.dto.ProfileDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[50,52] cannot find symbol
+  symbol:   method getAbout()
+  location: variable profileDTO of type com.cubicalseeker.dto.ProfileDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[51,53] cannot find symbol
+  symbol:   method getSkills()
+  location: variable profileDTO of type com.cubicalseeker.dto.ProfileDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[52,58] cannot find symbol
+  symbol:   method getExperiences()
+  location: variable profileDTO of type com.cubicalseeker.dto.ProfileDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[53,61] cannot find symbol
+  symbol:   method getCertifications()
+  location: variable profileDTO of type com.cubicalseeker.dto.ProfileDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[54,55] cannot find symbol
+  symbol:   method getTotalExp()
+  location: variable profileDTO of type com.cubicalseeker.dto.ProfileDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[55,69] cannot find symbol
+  symbol:   method getEmail()
+  location: variable userDTO of type com.cubicalseeker.dto.UserDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[57,66] cannot find symbol
+  symbol:   method getEmail()
+  location: variable userDTO of type com.cubicalseeker.dto.UserDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[57,86] cannot find symbol
+  symbol:   method getName()
+  location: variable userDTO of type com.cubicalseeker.dto.UserDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[60,16] cannot find symbol
+  symbol:   method setId(java.lang.Long)
+  location: variable userDTO of type com.cubicalseeker.dto.UserDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[62,59] cannot find symbol
+  symbol:   method getPassword()
+  location: variable userDTO of type com.cubicalseeker.dto.UserDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[70,56] cannot find symbol
+  symbol:   method getEmail()
+  location: variable loginDTO of type com.cubicalseeker.dto.LoginDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[72,46] cannot find symbol
+  symbol:   method getPassword()
+  location: variable loginDTO of type com.cubicalseeker.dto.LoginDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[72,66] cannot find symbol
+  symbol:   method getPassword()
+  location: variable user of type com.cubicalseeker.entity.User
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[89,19] constructor OTP in class com.cubicalseeker.entity.OTP cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.time.LocalDateTime
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[91,57] cannot find symbol
+  symbol:   method getName()
+  location: variable user of type com.cubicalseeker.entity.User
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[99,38] cannot find symbol
+  symbol:   method getOtpCode()
+  location: variable otpEntity of type com.cubicalseeker.entity.OTP
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[105,64] cannot find symbol
+  symbol:   method getEmail()
+  location: variable loginDTO of type com.cubicalseeker.dto.LoginDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[107,65] cannot find symbol
+  symbol:   method getPassword()
+  location: variable loginDTO of type com.cubicalseeker.dto.LoginDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[110,36] cannot find symbol
+  symbol:   method getId()
+  location: variable user of type com.cubicalseeker.entity.User
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[111,21] cannot find symbol
+  symbol:   method setMessage(java.lang.String)
+  location: variable noti of type com.cubicalseeker.dto.NotificationDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[112,21] cannot find symbol
+  symbol:   method setAction(java.lang.String)
+  location: variable noti of type com.cubicalseeker.dto.NotificationDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[114,24] constructor ResponseDTO in class com.cubicalseeker.dto.ResponseDTO cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/utility/ExceptionControllerAdvice.java:[27,27] constructor ErrorInfo in class com.cubicalseeker.utility.ErrorInfo cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,int,java.time.LocalDateTime
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/utility/ExceptionControllerAdvice.java:[33,27] constructor ErrorInfo in class com.cubicalseeker.utility.ErrorInfo cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,int,java.time.LocalDateTime
+  reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/utility/ExceptionControllerAdvice.java:[53,27] constructor ErrorInfo in class com.cubicalseeker.utility.ErrorInfo cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,int,java.time.LocalDateTime
+  reason: actual and formal argument lists differ in length
+[INFO] 78 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.782 s
+[INFO] Finished at: 2026-02-05T13:01:17+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile (default-compile) on project cubical-seeker: Compilation failure: Compilation failure: 
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/api/JobAPI.java:[53,45] constructor ResponseDTO in class com.cubicalseeker.dto.ResponseDTO cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/api/JobAPI.java:[63,45] constructor ResponseDTO in class com.cubicalseeker.dto.ResponseDTO cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/dto/JobDTO.java:[38,16] constructor Job in class com.cubicalseeker.entity.Job cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.Long,java.lang.String,java.lang.String,this.appli[...] null,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Long,java.time.LocalDateTime,java.lang.String,java.util.List<java.lang.String>,com.cubicalseeker.dto.JobStatus,java.lang.Long
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/dto/ApplicantDTO.java:[28,24] constructor Applicant in class com.cubicalseeker.entity.Applicant cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.Long,java.lang.String,java.lang.String,java.lang.Long,java.lang.String,this.resum[...] null,java.lang.String,java.time.LocalDateTime,com.cubicalseeker.dto.ApplicantionStatus,java.time.LocalDateTime
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/entity/Applicant.java:[29,24] constructor ApplicantDTO in class com.cubicalseeker.dto.ApplicantDTO cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.Long,java.lang.String,java.lang.String,java.lang.Long,java.lang.String,this.resum[...] null,java.lang.String,java.time.LocalDateTime,com.cubicalseeker.dto.ApplicantionStatus,java.time.LocalDateTime
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/entity/Job.java:[38,16] constructor JobDTO in class com.cubicalseeker.dto.JobDTO cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.Long,java.lang.String,java.lang.String,this.appli[...] null,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Long,java.time.LocalDateTime,java.lang.String,java.util.List<java.lang.String>,com.cubicalseeker.dto.JobStatus,java.lang.Long
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/api/NotificationAPI.java:[36,41] constructor ResponseDTO in class com.cubicalseeker.dto.ResponseDTO cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/entity/Notification.java:[28,24] constructor NotificationDTO in class com.cubicalseeker.dto.NotificationDTO cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.Long,java.lang.Long,java.lang.String,java.lang.String,java.lang.String,com.cubicalseeker.dto.NotificationStatus,java.time.LocalDateTime
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/dto/NotificationDTO.java:[25,24] constructor Notification in class com.cubicalseeker.entity.Notification cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.Long,java.lang.Long,java.lang.String,java.lang.String,java.lang.String,com.cubicalseeker.dto.NotificationStatus,java.time.LocalDateTime
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/api/ProfileAPI.java:[42,27] cannot find symbol
+[ERROR]   symbol:   method setId(java.lang.Long)
+[ERROR]   location: variable profileDTO of type com.cubicalseeker.dto.ProfileDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/dto/ProfileDTO.java:[31,24] constructor Profile in class com.cubicalseeker.entity.Profile cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,this.pictu[...] null,java.lang.Long,java.util.List<java.lang.String>,java.util.List<com.cubicalseeker.dto.Experience>,java.util.List<com.cubicalseeker.dto.Certification>,java.util.List<java.lang.Long>
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/entity/Profile.java:[38,24] constructor ProfileDTO in class com.cubicalseeker.dto.ProfileDTO cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,this.pictu[...] null,java.lang.Long,java.util.List<java.lang.String>,java.util.List<com.cubicalseeker.dto.Experience>,java.util.List<com.cubicalseeker.dto.Certification>,java.util.List<java.lang.Long>
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/api/UserAPI.java:[43,41] constructor ResponseDTO in class com.cubicalseeker.dto.ResponseDTO cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/api/UserAPI.java:[48,45] constructor ResponseDTO in class com.cubicalseeker.dto.ResponseDTO cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/api/UserAPI.java:[53,45] constructor ResponseDTO in class com.cubicalseeker.dto.ResponseDTO cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/dto/UserDTO.java:[34,27] constructor User in class com.cubicalseeker.entity.User cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.Long,java.lang.String,java.lang.String,java.lang.String,com.cubicalseeker.dto.AccountType,java.lang.Long
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/entity/User.java:[31,19] constructor UserDTO in class com.cubicalseeker.dto.UserDTO cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.Long,java.lang.String,java.lang.String,java.lang.String,com.cubicalseeker.dto.AccountType,java.lang.Long
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[32,26] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable jobDTO of type com.cubicalseeker.dto.JobDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[33,31] cannot find symbol
+[ERROR]   symbol:   method setId(java.lang.Long)
+[ERROR]   location: variable jobDTO of type com.cubicalseeker.dto.JobDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[34,31] cannot find symbol
+[ERROR]   symbol:   method setPostTime(java.time.LocalDateTime)
+[ERROR]   location: variable jobDTO of type com.cubicalseeker.dto.JobDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[37,64] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable jobDTO of type com.cubicalseeker.dto.JobDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[38,31] cannot find symbol
+[ERROR]   symbol:   method getJobStatus()
+[ERROR]   location: variable job of type com.cubicalseeker.entity.Job
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[38,78] cannot find symbol
+[ERROR]   symbol:   method getJobStatus()
+[ERROR]   location: variable jobDTO of type com.cubicalseeker.dto.JobDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[38,125] cannot find symbol
+[ERROR]   symbol:   method setPostTime(java.time.LocalDateTime)
+[ERROR]   location: variable jobDTO of type com.cubicalseeker.dto.JobDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[57,46] cannot find symbol
+[ERROR]   symbol:   method getApplicants()
+[ERROR]   location: variable job of type com.cubicalseeker.entity.Job
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[59,53] cannot find symbol
+[ERROR]   symbol:   method getApplicantId()
+[ERROR]   location: variable x of type com.cubicalseeker.entity.Applicant
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[59,84] cannot find symbol
+[ERROR]   symbol:   method getApplicantId()
+[ERROR]   location: variable applicantDTO of type com.cubicalseeker.dto.ApplicantDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[60,29] cannot find symbol
+[ERROR]   symbol:   method setApplicationStatus(com.cubicalseeker.dto.ApplicantionStatus)
+[ERROR]   location: variable applicantDTO of type com.cubicalseeker.dto.ApplicantDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[62,20] cannot find symbol
+[ERROR]   symbol:   method setApplicants(java.util.List<com.cubicalseeker.entity.Applicant>)
+[ERROR]   location: variable job of type com.cubicalseeker.entity.Job
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[74,60] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable application of type com.cubicalseeker.dto.Application
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[75,46] cannot find symbol
+[ERROR]   symbol:   method getApplicants()
+[ERROR]   location: variable job of type com.cubicalseeker.entity.Job
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[76,39] cannot find symbol
+[ERROR]   symbol:   method getApplicantId()
+[ERROR]   location: variable application of type com.cubicalseeker.dto.Application
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[77,67] cannot find symbol
+[ERROR]   symbol:   method getApplicationStatus()
+[ERROR]   location: variable application of type com.cubicalseeker.dto.Application
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[78,47] cannot find symbol
+[ERROR]   symbol:   method getApplicationStatus()
+[ERROR]   location: variable application of type com.cubicalseeker.dto.Application
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[78,137] cannot find symbol
+[ERROR]   symbol:   method getInterviewTime()
+[ERROR]   location: variable application of type com.cubicalseeker.dto.Application
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/JobServiceImpl.java:[82,20] cannot find symbol
+[ERROR]   symbol:   method setApplicants(java.util.List<com.cubicalseeker.entity.Applicant>)
+[ERROR]   location: variable job of type com.cubicalseeker.entity.Job
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/utility/Utilities.java:[37,19] cannot find symbol
+[ERROR]   symbol:   method getSeq()
+[ERROR]   location: variable seq of type com.cubicalseeker.entity.Sequence
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/NotificationServiceImpl.java:[33,28] cannot find symbol
+[ERROR]   symbol:   method setId(java.lang.Long)
+[ERROR]   location: variable notificationDTO of type com.cubicalseeker.dto.NotificationDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/NotificationServiceImpl.java:[34,28] cannot find symbol
+[ERROR]   symbol:   method setTimestamp(java.time.LocalDateTime)
+[ERROR]   location: variable notificationDTO of type com.cubicalseeker.dto.NotificationDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/NotificationServiceImpl.java:[35,28] cannot find symbol
+[ERROR]   symbol:   method setStatus(com.cubicalseeker.dto.NotificationStatus)
+[ERROR]   location: variable notificationDTO of type com.cubicalseeker.dto.NotificationDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/NotificationServiceImpl.java:[53,21] cannot find symbol
+[ERROR]   symbol:   method setStatus(com.cubicalseeker.dto.NotificationStatus)
+[ERROR]   location: variable noti of type com.cubicalseeker.entity.Notification
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[27,24] cannot find symbol
+[ERROR]   symbol:   method setId(java.lang.Long)
+[ERROR]   location: variable profile of type com.cubicalseeker.entity.Profile
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[28,24] cannot find symbol
+[ERROR]   symbol:   method setName(java.lang.String)
+[ERROR]   location: variable profile of type com.cubicalseeker.entity.Profile
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[29,24] cannot find symbol
+[ERROR]   symbol:   method setEmail(java.lang.String)
+[ERROR]   location: variable profile of type com.cubicalseeker.entity.Profile
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[30,24] cannot find symbol
+[ERROR]   symbol:   method setSkills(java.util.ArrayList<java.lang.Object>)
+[ERROR]   location: variable profile of type com.cubicalseeker.entity.Profile
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[31,24] cannot find symbol
+[ERROR]   symbol:   method setExperiences(java.util.ArrayList<java.lang.Object>)
+[ERROR]   location: variable profile of type com.cubicalseeker.entity.Profile
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[32,24] cannot find symbol
+[ERROR]   symbol:   method setCertifications(java.util.ArrayList<java.lang.Object>)
+[ERROR]   location: variable profile of type com.cubicalseeker.entity.Profile
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[34,31] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable profile of type com.cubicalseeker.entity.Profile
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[44,80] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable profileDTO of type com.cubicalseeker.dto.ProfileDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[46,49] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable profileDTO of type com.cubicalseeker.dto.ProfileDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[47,55] cannot find symbol
+[ERROR]   symbol:   method getJobTitle()
+[ERROR]   location: variable profileDTO of type com.cubicalseeker.dto.ProfileDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[48,54] cannot find symbol
+[ERROR]   symbol:   method getCompany()
+[ERROR]   location: variable profileDTO of type com.cubicalseeker.dto.ProfileDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[49,55] cannot find symbol
+[ERROR]   symbol:   method getLocation()
+[ERROR]   location: variable profileDTO of type com.cubicalseeker.dto.ProfileDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[50,52] cannot find symbol
+[ERROR]   symbol:   method getAbout()
+[ERROR]   location: variable profileDTO of type com.cubicalseeker.dto.ProfileDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[51,53] cannot find symbol
+[ERROR]   symbol:   method getSkills()
+[ERROR]   location: variable profileDTO of type com.cubicalseeker.dto.ProfileDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[52,58] cannot find symbol
+[ERROR]   symbol:   method getExperiences()
+[ERROR]   location: variable profileDTO of type com.cubicalseeker.dto.ProfileDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[53,61] cannot find symbol
+[ERROR]   symbol:   method getCertifications()
+[ERROR]   location: variable profileDTO of type com.cubicalseeker.dto.ProfileDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/ProfileServiceImpl.java:[54,55] cannot find symbol
+[ERROR]   symbol:   method getTotalExp()
+[ERROR]   location: variable profileDTO of type com.cubicalseeker.dto.ProfileDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[55,69] cannot find symbol
+[ERROR]   symbol:   method getEmail()
+[ERROR]   location: variable userDTO of type com.cubicalseeker.dto.UserDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[57,66] cannot find symbol
+[ERROR]   symbol:   method getEmail()
+[ERROR]   location: variable userDTO of type com.cubicalseeker.dto.UserDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[57,86] cannot find symbol
+[ERROR]   symbol:   method getName()
+[ERROR]   location: variable userDTO of type com.cubicalseeker.dto.UserDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[60,16] cannot find symbol
+[ERROR]   symbol:   method setId(java.lang.Long)
+[ERROR]   location: variable userDTO of type com.cubicalseeker.dto.UserDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[62,59] cannot find symbol
+[ERROR]   symbol:   method getPassword()
+[ERROR]   location: variable userDTO of type com.cubicalseeker.dto.UserDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[70,56] cannot find symbol
+[ERROR]   symbol:   method getEmail()
+[ERROR]   location: variable loginDTO of type com.cubicalseeker.dto.LoginDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[72,46] cannot find symbol
+[ERROR]   symbol:   method getPassword()
+[ERROR]   location: variable loginDTO of type com.cubicalseeker.dto.LoginDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[72,66] cannot find symbol
+[ERROR]   symbol:   method getPassword()
+[ERROR]   location: variable user of type com.cubicalseeker.entity.User
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[89,19] constructor OTP in class com.cubicalseeker.entity.OTP cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.time.LocalDateTime
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[91,57] cannot find symbol
+[ERROR]   symbol:   method getName()
+[ERROR]   location: variable user of type com.cubicalseeker.entity.User
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[99,38] cannot find symbol
+[ERROR]   symbol:   method getOtpCode()
+[ERROR]   location: variable otpEntity of type com.cubicalseeker.entity.OTP
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[105,64] cannot find symbol
+[ERROR]   symbol:   method getEmail()
+[ERROR]   location: variable loginDTO of type com.cubicalseeker.dto.LoginDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[107,65] cannot find symbol
+[ERROR]   symbol:   method getPassword()
+[ERROR]   location: variable loginDTO of type com.cubicalseeker.dto.LoginDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[110,36] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable user of type com.cubicalseeker.entity.User
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[111,21] cannot find symbol
+[ERROR]   symbol:   method setMessage(java.lang.String)
+[ERROR]   location: variable noti of type com.cubicalseeker.dto.NotificationDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[112,21] cannot find symbol
+[ERROR]   symbol:   method setAction(java.lang.String)
+[ERROR]   location: variable noti of type com.cubicalseeker.dto.NotificationDTO
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/service/UserServiceImpl.java:[114,24] constructor ResponseDTO in class com.cubicalseeker.dto.ResponseDTO cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/utility/ExceptionControllerAdvice.java:[27,27] constructor ErrorInfo in class com.cubicalseeker.utility.ErrorInfo cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,int,java.time.LocalDateTime
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/utility/ExceptionControllerAdvice.java:[33,27] constructor ErrorInfo in class com.cubicalseeker.utility.ErrorInfo cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,int,java.time.LocalDateTime
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /D:/cubicalseeker/backend/cubical-seeker/src/main/java/com/cubicalseeker/utility/ExceptionControllerAdvice.java:[53,27] constructor ErrorInfo in class com.cubicalseeker.utility.ErrorInfo cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,int,java.time.LocalDateTime
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

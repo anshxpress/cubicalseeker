@@ -13,26 +13,28 @@ const PostedJobPage = () => {
   const user = useSelector((state: any) => state.user);
   const [jobList, setJobList] = useState<any[]>([]);
   const [job, setJob] = useState<any>({});
-  console.log(user.id)
+  console.log(user?.id)
   useEffect(() => {
     window.scrollTo(0, 0);
+    if(user?.id){
     getJobPostedBy(user.id)
       .then((res) => {
         setJobList(res);
-        if (res && res.lenght > 0 && Number(id) == 0)
+        if (res && res.length > 0 && Number(id) == 0)
           navigate(`/posted-jobs/${res[0].id}`);
         setJob(res.find((item: any) => item.id == id));
       })
       .catch((err) => {
         console.log(err);
       });
-  }, [id]);
+    }
+  }, [id, user]);
   return (
     <div className="min-h-[90vh] bg-mine-shaft-950 font-['poppins'] px-4">
       <Divider size="xs" />
       <div className=" flex gap-5">
-        <PostedJob JobDesc={JobDesc} jobList={jobList} />
-        <PostedJobDecs {...JobDesc} />
+        <PostedJob job={job} jobList={jobList} />
+        <PostedJobDecs {...job} />
       </div>
     </div>
   );
