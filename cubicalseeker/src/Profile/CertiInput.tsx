@@ -20,18 +20,18 @@ const CertiInput=(props:any)=>{
             name:'',
             issuer:'',
             issueDate: new Date(),
-            certificate:""
+            certificateId:""
         },
         validate:{
             name:isNotEmpty("name is required"),
             issuer:isNotEmpty("issuer is required"),
             issueDate:isNotEmpty("issue Date is reqired"),
-            certificate:isNotEmpty("Certificate is required"),
+            certificateId:isNotEmpty("Certificate is required"),
         }
     });
     const handleSave=()=>{  
             form.validate();  
-            // if(!form.isValid())return;  
+            if(!form.isValid())return;  
             let certi=[...profile.certifications];  
             certi.push(form.getValues());  
             certi[certi.length-1].issueDate=certi[certi.length-1].issueDate.toISOString();  

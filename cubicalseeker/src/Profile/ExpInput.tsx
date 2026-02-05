@@ -46,7 +46,7 @@ const ExpInput = (props: any) => {
   const handleSave = () => {
     try {
       form.validate();
-    //   if (!form.isValid()) return;
+      if (!form.isValid()) return;
     //   console.log("test")
       let exp = [...profile.experiences];
       if (props.add) {

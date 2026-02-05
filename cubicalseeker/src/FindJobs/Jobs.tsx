@@ -42,7 +42,7 @@ const Jobs=() =>{
         if (filter.Location && filter.Location.length > 0)   
             filtered = filtered.filter((jobs: any) => filter.Location?.some((x: any) => jobs.location?.toLowerCase().includes(x.toLowerCase())));  
         if (filter.Experience && filter.Experience.length > 0)   
-            filtered = filtered.filter((jobs: any) => filter.Skill?.some((x: any) => jobs.Experience?.toLowerCase.includes(x.toLowerCase())));  
+            filtered = filtered.filter((jobs: any) => filter.Skill?.some((x: any) => jobs.Experience?.toLowerCase().includes(x.toLowerCase())));  
         if (filter.exp && filter.exp.length > 0)   
             filtered = filtered.filter((jobs: any) => filter.exp[0] <= jobs.totalExp && jobs.totalExp <= filter.exp[1]);  
         setFilteredJobs(filtered); 

@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 import { timeAgo } from "../Services/Utilities";
 import { useDispatch, useSelector } from "react-redux";
 import { changeProfile } from "../Slices/ProfileSlice";
+//@ts-ignore
+import DOMPurify from "dompurify";
 
 const JobCards = (props: any) => {
   const profile = useSelector((state: any) => state.profile);
@@ -66,7 +68,7 @@ const JobCards = (props: any) => {
       <Text
         className="!text-xs text-justify !text-mine-shaft-300"
         lineClamp={3}
-        dangerouslySetInnerHTML={{ __html: props.description }}
+        dangerouslySetInnerHTML={{ __html:  DOMPurify.sanitize(props.description) }}
       ></Text>
       <Divider size="xs" color="blue.7" />
       <div className="flex justify-between">

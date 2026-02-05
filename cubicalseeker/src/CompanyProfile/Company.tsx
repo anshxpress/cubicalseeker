@@ -3,17 +3,21 @@ import { IconBriefcase, IconMapPins } from "@tabler/icons-react";
 import AboutComp from "./AboutComp";
 import JobCards from "../FindJobs/JobCards";
 import JobsComp from "./JobsComp";
+import { companyData } from "../Data/Company";
 import CompEmployee from "./CompEmployee";
+import { useParams } from "react-router-dom";
 
 const Company=()=>{
+    const {name} = useParams();
+    const company = companyData[name as string] || companyData["Google"]; // Fallback to Google if name not found
     return <div className="w-3/4">
         <div className="relative">
             <img className="rounded-t-2xl" src="/profile/banner.jpg" alt="" />
             <img className="w-36 h-36 rounded-3xl -bottom-1/4 p-2 absolute left-5
-             bg-mine-shaft-950 border-5 " src="/Icons/Google.png" alt="" />
+             bg-mine-shaft-950 border-5 " src={`/Icons/${name}.png`} alt="" />
            </div>
             <div className=" px-3 mt-12">
-                <div className="text-3xl font-semibold flex justify-between py-3">Google
+                <div className="text-3xl font-semibold flex justify-between py-3">{name}
                 <Avatar.Group>
       <Avatar src="avatar.png" />
       <Avatar src="avatar1.png" />
@@ -33,8 +37,8 @@ const Company=()=>{
         <Tabs.Tab value="third">Employees</Tabs.Tab>
       </Tabs.List>
 
-      <Tabs.Panel value="first"><AboutComp/></Tabs.Panel>
-      <Tabs.Panel value="second"><JobsComp/></Tabs.Panel>
+      <Tabs.Panel value="first"><AboutComp company={company}/></Tabs.Panel>
+      <Tabs.Panel value="second"><JobsComp company={name}/></Tabs.Panel>
       <Tabs.Panel value="third"><CompEmployee/></Tabs.Panel>
     </Tabs>
          </div>
