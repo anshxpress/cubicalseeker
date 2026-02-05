@@ -19,12 +19,12 @@ services:
         value: 8080
 
   # Frontend Service (React Static Site)
-  - type: static
+  - type: site
     name: cubical-seeker-frontend
     env: static
     context: cubicalseeker
     buildCommand: npm install && npm run build
-    staticPublishPath: ./build
+    publishPath: ./build
     routes:
       - type: rewrite
         source: /*
