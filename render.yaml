@@ -2,10 +2,11 @@ services:
   # Backend Service (Spring Boot)
   - type: web
     name: cubical-seeker-backend
-    env: java
+    env: docker
     context: backend/cubical-seeker
-    buildCommand: mvn clean package -DskipTests
-    startCommand: java -jar target/cubical-seeker-0.0.1-SNAPSHOT.jar
+    node:
+      name: cubical-seeker-backend
+      region: oregon 
     envVars:
       - key: JAVA_VERSION
         value: 17
@@ -17,6 +18,8 @@ services:
         sync: false # User must provide this
       - key: PORT
         value: 8080
+      - key: ALLOWED_ORIGINS
+        sync: false # User must provide this (e.g. https://cubicalseeker.vercel.app)
 
   # Frontend Service (React Static Site)
   - type: site
